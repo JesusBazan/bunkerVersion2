@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {MatIconModule} from '@angular/material/icon';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
@@ -31,6 +32,7 @@ import { MatListModule } from '@angular/material/list';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    BrowserAnimationsModule,
     MatListModule
   ],
   providers: [],
