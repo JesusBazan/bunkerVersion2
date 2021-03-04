@@ -19,6 +19,7 @@ import { MateriasComponent } from './components/materias/materias.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NewsComponent } from './components/news/news.component';
 import { MatCardModule } from '@angular/material/card';
+import { CardNewsComponent } from './components/card-news/card-news.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatCardModule } from '@angular/material/card';
     SideNavMaterialComponent,
     MateriasComponent,
     LibrosComponent,
-    NewsComponent
+    NewsComponent,
+    CardNewsComponent
   ],
   imports: [
     BrowserModule,
