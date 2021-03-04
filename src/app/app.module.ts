@@ -15,6 +15,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MateriasComponent } from './components/materias/materias.component';
+import { LibrosComponent } from './components/libros/libros.component';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { MatListModule } from '@angular/material/list';
     SideBarComponent,
     DashboardComponent,
     MatematicasComponent,
-    SideNavMaterialComponent
+    SideNavMaterialComponent,
+    MateriasComponent,
+    LibrosComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
