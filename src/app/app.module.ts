@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 import { MateriasComponent } from './components/materias/materias.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NewsComponent } from './components/news/news.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NewsComponent } from './components/news/news.component';
     MatButtonModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
