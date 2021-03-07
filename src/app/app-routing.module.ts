@@ -7,6 +7,8 @@ import {MatematicasComponent} from './components/matematicas/matematicas.compone
 import {NewsComponent} from './components/news/news.component'
 import {LibrosComponent} from './components/libros/libros.component'
 import {MateriasComponent} from './components/materias/materias.component'
+import {InicioComponent}from './components/inicio/inicio.component'
+import { FooterComponent } from './components/footer/footer.component';
 const routes: Routes = [
   {
     path: 'view/dashboard',
@@ -27,7 +29,16 @@ const routes: Routes = [
   {
     path:'view/materias',
     component:MateriasComponent
+  },
+  {
+    path:'view/inicio',
+    component:InicioComponent
+  },
+  {
+    path:'view/footer',
+    component:FooterComponent
   }
+
 ];
 
 @NgModule({

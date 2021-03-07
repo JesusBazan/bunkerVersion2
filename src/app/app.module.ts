@@ -20,6 +20,8 @@ import { LibrosComponent } from './components/libros/libros.component';
 import { NewsComponent } from './components/news/news.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardNewsComponent } from './components/card-news/card-news.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { CardNewsComponent } from './components/card-news/card-news.component';
     MateriasComponent,
     LibrosComponent,
     NewsComponent,
-    CardNewsComponent
+    CardNewsComponent,
+    InicioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
