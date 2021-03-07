@@ -24,6 +24,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { FirmarComponent } from './components/firmar/firmar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
     CardNewsComponent,
     InicioComponent,
     FooterComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    FirmarComponent
   ],
   imports: [
     BrowserModule,
