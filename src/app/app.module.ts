@@ -22,7 +22,8 @@ import { MatCardModule } from '@angular/material/card';
 import { CardNewsComponent } from './components/card-news/card-news.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NewsComponent,
     CardNewsComponent,
     InicioComponent,
-    FooterComponent
+    FooterComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,9 @@ import { FooterComponent } from './components/footer/footer.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+  
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

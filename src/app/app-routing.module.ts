@@ -9,6 +9,7 @@ import {LibrosComponent} from './components/libros/libros.component'
 import {MateriasComponent} from './components/materias/materias.component'
 import {InicioComponent}from './components/inicio/inicio.component'
 import { FooterComponent } from './components/footer/footer.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 const routes: Routes = [
   {
     path: 'view/dashboard',
@@ -37,6 +38,11 @@ const routes: Routes = [
   {
     path:'view/footer',
     component:FooterComponent
+  }
+  ,
+  {
+    path:'view/chatbot',
+    component:ChatbotComponent
   }
 
 ];
