@@ -21,6 +21,8 @@ import { NewsComponent } from './components/news/news.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardNewsComponent } from './components/card-news/card-news.component';
 
+import { AnunciosService} from './services/anuncios/anuncios.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +47,9 @@ import { CardNewsComponent } from './components/card-news/card-news.component';
     MatListModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    AnunciosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
