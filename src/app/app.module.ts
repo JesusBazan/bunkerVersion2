@@ -25,6 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { FirmarComponent } from './components/firmar/firmar.component';
+import{FormsModule,ReactiveFormsModule}from '@angular/forms';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,9 @@ import { FirmarComponent } from './components/firmar/firmar.component';
     BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule
   
     
   ],
