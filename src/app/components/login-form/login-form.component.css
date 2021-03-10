@@ -4,13 +4,24 @@
   z-index: 1;
   background: #ffffff;
   opacity: 99%;
-  max-width: 260px;
-  margin: 200px auto 100px;
+  width: 400px;
+  margin: 100px auto 100px;
   padding: 10px 45px 30px 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 10px;
+  height: 500px;
 }
+
+.inputLog {
+  width: 80%;
+}
+
+.tagLogin{
+  font-size: x-large;
+}
+
+/*
 .form p {
   font-size: 15px;
   padding: 1px;
@@ -61,4 +72,4 @@
 .form .message a {
   color: #06c5cf;
   text-decoration: none;
-}
+} */
