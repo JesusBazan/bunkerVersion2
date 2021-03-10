@@ -20,17 +20,14 @@ import { LibrosComponent } from './components/libros/libros.component';
 import { NewsComponent } from './components/news/news.component';
 import { MatCardModule } from '@angular/material/card';
 import { CardNewsComponent } from './components/card-news/card-news.component';
-<<<<<<< HEAD
-
 import { AnunciosService} from './services/anuncios/anuncios.service'
-
-=======
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { FirmarComponent } from './components/firmar/firmar.component';
->>>>>>> a0b31eebfbad77553a216ecb72588a3e883d7ccc
+import{FormsModule,ReactiveFormsModule}from '@angular/forms';
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +55,9 @@ import { FirmarComponent } from './components/firmar/firmar.component';
     BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule
   
     
   ],
