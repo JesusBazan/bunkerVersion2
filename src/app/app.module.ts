@@ -37,6 +37,7 @@ import { LoginFormComponent} from './components/login-form/login-form.component'
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { FirmarComponent } from './components/firmar/firmar.component';
 import { from } from 'rxjs';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { from } from 'rxjs';
     FooterComponent,
     ChatbotComponent,
     FirmarComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
