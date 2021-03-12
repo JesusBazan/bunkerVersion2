@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 
 import { Usuario} from 'src/app/models/usuario'
 import { from } from 'rxjs';
@@ -14,6 +14,10 @@ export class UsuariosService {
   constructor(private http : HttpClient) { }
 
   getUsuarios(){
+    const httpHeaders = new HttpHeaders({
+      'content-type':'application/json',
+      'Access-Control-Allow-Origin':'http://3.135.1.124:3000/usuarios'
+    });
     return this.http.get(`${this.API_base}/usuarios`);
   }
 
