@@ -5,22 +5,22 @@
     <form class="example-form">
       <mat-form-field class="inputReg">
         <mat-label>Nombre de usuario</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="">
+        <input matInput placeholder="Ex. Juan00" value="" name="txtUsername" [(ngModel)]="usuario.username">
       </mat-form-field>
 
       <mat-form-field class="inputReg">
         <mat-label>Nombre(s)</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="">
+        <input matInput placeholder="Ex. Juan" value="" name="txtNombres" [(ngModel)]="usuario.nombres">
       </mat-form-field>
 
       <mat-form-field class="inputReg">
         <mat-label>Apellidos</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="">
+        <input matInput placeholder="Ex. Perez Hernandez" value="" name="txtApellidos" [(ngModel)]="usuario.apellidos">
       </mat-form-field>
 
       <mat-form-field class="inputReg">
         <mat-label>Correo electronico</mat-label>
-        <input matInput placeholder="Ex. Pizza" value="">
+        <input matInput placeholder="Ex. juan99@gmail.com" value="" name="txtCorreo" [(ngModel)]="usuario.correo">
       </mat-form-field>
     
       <!-- <mat-form-field class="example-full-width">
@@ -30,13 +30,15 @@
 
       <mat-form-field class="inputReg">
         <mat-label>Contraseña</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" name="txtContrasenia" [(ngModel)]="usuario.contrasenia">
+        <!-- [(ngModel)]="usuario.contrasenia" -->
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="btnRegister">registrarse</button>
+      <button mat-raised-button color="primary" class="btnRegister" (click)="saveNewUser()">registrarse</button>
+      
 
     </form>
   </div>

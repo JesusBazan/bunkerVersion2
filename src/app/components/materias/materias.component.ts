@@ -10,6 +10,7 @@ export class MateriasComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

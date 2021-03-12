@@ -22,7 +22,7 @@ export class UsuariosService {
   }
 
   insertarUsuario( usuario:Usuario){
-    return this.http.post(`${this.API_base}/insertarUsuario`, usuario);
+    return this.http.post('/insertarUsuario', usuario);
   }
 
   actualizarUsuario(){
