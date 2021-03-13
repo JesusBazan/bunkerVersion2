@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms'
+import { Usuario } from 'src/app/models/usuario';
+import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 
 @Component({
   selector: 'app-login-form',
@@ -10,8 +12,13 @@ export class LoginFormComponent implements OnInit {
 
   hide = true;
 
+  currentUsername = '';
+  currentPassword = '';
+
+  usuarios: any = [];
+
   //loginForm : FormGroup;
-  constructor() { }
+  constructor( private usuarioService: UsuariosService) { }
 
   ngOnInit(): void {
     // this.loginForm = new FormGroup({
@@ -19,6 +26,21 @@ export class LoginFormComponent implements OnInit {
     //   password : new FormControl('',[Validators.required, Validators.minLength(6)])
     // }
     // );
+  }
+
+  getUsers(){
+    this.usuarioService.getUsuarios().subscribe(
+      res => {
+        this.usuarios = res;
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  }
+
+  iniciarSesion(){
+    
   }
 
 }
