@@ -1,0 +1,7 @@
+{
+    "*":{
+        "target": "http://3.135.1.124:3000",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
