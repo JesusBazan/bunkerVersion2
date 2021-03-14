@@ -11,6 +11,7 @@ import {InicioComponent}from './components/inicio/inicio.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { FirmarComponent } from './components/firmar/firmar.component';
+
 const routes: Routes = [
   {
     path: 'view/dashboard',

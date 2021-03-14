@@ -28,6 +28,7 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { FirmarComponent } from './components/firmar/firmar.component';
 import{FormsModule,ReactiveFormsModule}from '@angular/forms';
 import { from } from 'rxjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { from } from 'rxjs';
     InicioComponent,
     FooterComponent,
     ChatbotComponent,
-    FirmarComponent
+    FirmarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -58,8 +60,8 @@ import { from } from 'rxjs';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule
-  
-    
+
+
   ],
   providers: [
     AnunciosService

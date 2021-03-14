@@ -7,9 +7,9 @@
       </h1>
       <select class="form-control" id="sel1">
         <option>AES</option>
-        <option>nOSE</option>
-        <option>Y OTRA</option>
-        <option>COSA</option>
+        <option>AES2</option>
+        <option>AES3</option>
+        <option>AES4</option>
       </select>
       <br>
       <div class="form-group">
@@ -22,7 +22,7 @@
         <input type="text" class="form-control" placeholder="Ingresa la llave " [(ngModel)]="encPass">
       </div>
       {{textoEncriptado}}
-      
+
       <br>
       <button type="button" class="btn btn-success float-right" (click)="convertirTexto('encriptar')">Encriptar</button>
     </div>

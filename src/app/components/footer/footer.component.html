@@ -1,3 +1,106 @@
+<head>
+  
+  <script type='text/javascript'>
+  $(document).ready(function() {
+      $('.count').hide();
+
+      $('.sociallink').hover(
+       function() {
+        // Set Hover Color
+        social_id = $(this).find('.social').attr('id');
+        switch(social_id)
+        {
+          case 'twitter':
+            new_textcolor = '#55d4ff';
+            new_text = 'Twitter friends';
+            break;
+          case 'facebook':
+            new_textcolor = '#354970';
+            new_text = 'Facebook friends';
+            break;
+          case 'dribbble':
+            new_textcolor = '#b73567';
+            new_text = 'Facebook friends';
+            break;
+          case 'rss':
+            new_textcolor = '#db6610';
+            new_text = 'RSS Subscribers';
+            break;
+          case 'googleplus':
+            new_textcolor = '#383638';
+            new_text = 'Google+ friends';
+            break;
+          case 'forrst':
+            new_textcolor = '#315c23';
+            new_text = 'Forrst friends';
+            break;
+        }
+
+        $(this).find('.button').stop().animate({
+          'left': '119px'
+        }, 700);
+         $(this).find('span').stop().animate({
+           'margin-left': '5px',
+           'color': new_textcolor
+         }, 500);
+         $(this).find('.social').stop().animate({
+           backgroundColor: '#fcfcfc'
+         }, 500);
+
+         $(this).find('span').text(new_text);
+
+         $(this).find('.count').stop().fadeIn("slow");
+
+      },
+      function(){
+        social_id = $(this).find('.social').attr('id');
+        switch(social_id)
+        {
+          case 'twitter':
+            new_bgcolor = '#55d4ff';
+            new_text = 'Follow on Twitter';
+            break;
+          case 'facebook':
+            new_bgcolor = '#354970';
+            new_text = 'Follow on Facebook';
+            break;
+          case 'dribbble':
+            new_bgcolor = '#b73567';
+            new_text = 'Follow on Dribbble';
+            break;
+          case 'rss':
+            new_bgcolor = '#db6610';
+            new_text = 'Subscribe via RSS';
+            break;
+          case 'googleplus':
+            new_bgcolor = '#383638';
+            new_text = 'Follow on Google+';
+            break;
+          case 'forrst':
+            new_bgcolor = '#315c23';
+            new_text = 'Follow on Forrst';
+            break;
+        }
+
+         $(this).find('.button').stop().animate({
+          'left': '0'
+          }, 700);
+        $(this).find('span').stop().animate({
+           'margin-left': '30px',
+          'color': '#ffffff'
+         }, 600);
+        $(this).find('.social').stop().animate({
+           backgroundColor: new_bgcolor
+         }, 500);
+
+        $(this).find('span').text(new_text);
+
+        $(this).find('.count').stop().fadeOut("slow");
+      });
+  });
+  </script>
+
+</head>
 <footer class="footer-area footer--light">
     <div class="footer-big">
       <!-- start .container -->
@@ -28,22 +131,16 @@
           <div class="col-md-3 col-sm-4">
             <div class="footer-widget">
               <div class="footer-menu footer-menu--1">
-                <h4 class="footer-widget-title">Popular Category</h4>
+                <h4 class="footer-widget-title">SERVICIOS</h4>
                 <ul>
                   <li>
-                    <a href="#">Wordpress</a>
+                    <a href="#">SEGURIDAD INFORMÁTICA</a>
                   </li>
                   <li>
-                    <a href="#">Plugins</a>
+                    <a href="#">FÁBRICA DE SOFTWARE</a>
                   </li>
                   <li>
-                    <a href="#">Joomla Template</a>
-                  </li>
-                  <li>
-                    <a href="#">Admin Template</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML Template</a>
+                    <a href="#">GESTIÓN ESCOLAR</a>
                   </li>
                 </ul>
               </div>
@@ -52,7 +149,7 @@
             <!-- Ends: .footer-widget -->
           </div>
           <!-- end /.col-md-3 -->
-  
+
           <div class="col-md-3 col-sm-4">
             <div class="footer-widget">
               <div class="footer-menu">
@@ -80,48 +177,71 @@
             <!-- Ends: .footer-widget -->
           </div>
           <!-- end /.col-lg-3 -->
-  
+
           <div class="col-md-3 col-sm-4">
             <div class="footer-widget">
               <div class="footer-menu no-padding">
                 <h4 class="footer-widget-title">Help Support</h4>
-                <ul>
-                  <li>
-                    <a href="#">Support Forum</a>
-                  </li>
-                  <li>
-                    <a href="#">Terms &amp; Conditions</a>
-                  </li>
-                  <li>
-                    <a href="#">Support Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">Refund Policy</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQs</a>
-                  </li>
-                  <li>
-                    <a href="#">Buyers Faq</a>
-                  </li>
-                  <li>
-                    <a href="#">Sellers Faq</a>
-                  </li>
-                </ul>
+                <div class="wrap">
+                  <a href="https://twitter.com/998pow" class="sociallink">
+                    <div id="twitter" class="social" style="background-color: rgb(85, 212, 255);">
+                      <div class="button" style="left: 0px;">
+                  </div>
+                  <span style="color: rgb(255, 255, 255); margin-left: 30px;">Seguir en Twitter</span>
+                      <div class="count" style="display: none; opacity: 1;">
+                  160</div>
+                  </div>
+                  </a>
+                  <br />
+                  <br />
+                  <a href="https://www.facebook.com/CrappoES" class="sociallink">
+                    <div id="facebook" class="social" style="background-color: rgb(53, 73, 112);">
+                      <div class="button" style="left: 0px;">
+                  </div>
+                  <span style="color: rgb(255, 255, 255); margin-left: 30px;">Seguir en Facebook</span>
+                      <div class="count" style="display: none; opacity: 1;">
+                  2615</div>
+                  </div>
+                  </a>
+                  <br />
+                  <br />
+                  <a href="http://feeds.feedburner.com/998pow/TgZy" class="sociallink">
+                    <div id="rss" class="social" style="background-color: rgb(219, 102, 16);">
+                      <div class="button" style="left: 0px;">
+                  </div>
+                  <span style="color: rgb(255, 255, 255); margin-left: 30px;">Suscribe vía RSS</span>
+                      <div class="count" style="display: none; opacity: 1;">
+                  33</div>
+                  </div>
+                  </a>
+                  <br />
+                  <br />
+                  <a href="https://plus.google.com/+998powBlogspot998pow" class="sociallink">
+                    <div id="googleplus" class="social" style="background-color: rgb(56, 54, 56);">
+                      <div class="button" style="left: 0px;">
+                  </div>
+                  <span style="color: rgb(255, 255, 255); margin-left: 30px;">Seguir en Google+</span>
+                      <div class="count" style="display: none; opacity: 1;">
+                  5</div>
+                  </div>
+                  </a>
+                  <br />
+                  <br />
+                  </div>
               </div>
               <!-- end /.footer-menu -->
             </div>
             <!-- Ends: .footer-widget -->
           </div>
           <!-- Ends: .col-lg-3 -->
-  
+
         </div>
         <!-- end /.row -->
       </div>
       <!-- end /.container -->
     </div>
     <!-- end /.footer-big -->
-  
+
     <div class="mini-footer">
       <div class="container">
         <div class="row">
@@ -132,8 +252,8 @@
                 <a href="#">ASKIT</a>
               </p>
             </div>
-  
- 
+
+
           </div>
         </div>
       </div>

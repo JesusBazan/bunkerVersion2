@@ -140,3 +140,81 @@ a {
   padding-left:0
  }
 }
+.social {
+  border-radius: 30px;
+  position: relative;
+  width: 150px;
+  height: 32px;
+  box-shadow: inset -1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+.social .count {
+  width: 58px;
+  height: 31px;
+  background: url(http://i83.photobucket.com/albums/j295/woratana/bubble.png) no-repeat;
+  position: absolute;
+  top: 0;
+  right: -65px;
+  line-height: 31px;
+  text-align: center;
+  text-indent: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #868686;
+}
+
+.social span {
+  font-size: 12px;
+  color: #fff;
+  line-height: 30px;
+  display: block;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+  margin-left: 30px;
+  text-align: center;
+  width: 120px;
+}
+
+.social .button {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+}
+
+#twitter.social {
+  background: #55d4ff;
+}
+
+#twitter .button {
+  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/twitter.png) 5px 5px no-repeat;
+  border: 1px solid #53d4ff;
+}
+
+#facebook.social {
+  background: #354970;
+}
+
+#facebook .button {
+  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/facebook.png) 5px 5px no-repeat;
+  border: 1px solid #354970;
+}
+
+#rss.social {
+  background: #db6610;
+}
+
+#rss .button {
+  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/rss.png) 5px 5px no-repeat;
+  border: 1px solid #db6610;
+}
+
+#googleplus.social {
+  background: #383638;
+}
+
+#googleplus .button {
+  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/googleplus.png) 5px 5px no-repeat;
+  border: 1px solid #383638;
+}
