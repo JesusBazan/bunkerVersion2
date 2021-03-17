@@ -11,6 +11,7 @@ import {InicioComponent}from './components/inicio/inicio.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { FirmarComponent } from './components/firmar/firmar.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path:'view/firmar',
     component:FirmarComponent
+  },
+  {
+    path:'view/registrarse',
+    component:RegisterFormComponent
   }
 
 
