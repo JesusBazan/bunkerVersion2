@@ -25,6 +25,10 @@ export class UsuariosService {
     return this.http.post('/insertarUsuario', usuario);
   }
 
+  iniciarSesion( usuarioLog:any ){
+    return this.http.post('/iniciarSesion',usuarioLog)
+  }
+
   actualizarUsuario(){
 
   }

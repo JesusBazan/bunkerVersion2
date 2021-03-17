@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms'
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
+import { Respuesta } from 'src/app/models/respuesta';
 import { Usuario } from 'src/app/models/usuario';
+import { UsuarioLog } from 'src/app/models/usuarioLog';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 
 @Component({
@@ -18,8 +20,15 @@ export class LoginFormComponent implements OnInit {
 
   usuarios: any = [];
 
+  usuariosLog: UsuarioLog = {
+    username: "",
+    contrasenia: ""
+  }
+
+  reponse: any = [];
+
   //loginForm : FormGroup;
-  constructor( private usuarioService: UsuariosService, private router: Router) { }
+  constructor(private usuarioService: UsuariosService, private router: Router) { }
 
   ngOnInit(): void {
     // this.loginForm = new FormGroup({
@@ -29,10 +38,12 @@ export class LoginFormComponent implements OnInit {
     // );
   }
 
-  getUsers(){
+  getUsers() {
     this.usuarioService.getUsuarios().subscribe(
       res => {
+        
         this.usuarios = res;
+        console.log(this.usuarios[0].username)
       },
       err => {
         console.log(err);
@@ -40,8 +51,19 @@ export class LoginFormComponent implements OnInit {
     )
   }
 
-  iniciarSesion(){
+  iniciarSesion() {
     this.router.navigate(['/view/dashboard']);
+    this.usuarioService.iniciarSesion(this.usuariosLog).subscribe(
+      res => {
+        console.log(this.usuariosLog)
+        this.reponse = res;
+        console.log(this.reponse[0].res)
+
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }
