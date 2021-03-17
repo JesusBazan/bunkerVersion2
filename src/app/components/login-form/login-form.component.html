@@ -22,9 +22,9 @@
         </button>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="btnEntrar">entrar</button>
+      <button mat-raised-button color="primary" class="btnEntrar" (click)="iniciarSesion()">entrar</button>
 
-      <a class="tagNoCount">¿aun no tienes una cuenta?</a>
+      <a class="tagNoCount" routerLink="/view/registrarse" routerLinkActive="active">¿aun no tienes una cuenta?</a>
       <br/>
       <a class="tagPasswordForget">olvide mi contraseña</a>
 

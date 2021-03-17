@@ -12,31 +12,39 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { FirmarComponent } from './components/firmar/firmar.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { SideNavMaterialComponent} from './side-nav-material/side-nav-material.component';
+import { LoginFormComponent } from './components/login-form/login-form.component'
 
 const routes: Routes = [
   {
     path: 'view/dashboard',
-    component:DashboardComponent
-  },
-  {
-    path: 'view/matematicas',
-    component:MatematicasComponent
-  },
-  {
-    path: 'view/news',
-    component:NewsComponent
-  },
-  {
-    path:'view/libros',
-    component:LibrosComponent
-  },
-  {
-    path:'view/materias',
-    component:MateriasComponent
-  },
-  {
-    path:'view/inicio',
-    component:InicioComponent
+    component:DashboardComponent,
+    children:[
+      {
+        path:'view/inicio',
+      component:InicioComponent
+      },
+      {
+        path: 'view/news',
+        component:NewsComponent
+      },
+      {
+        path: 'view/matematicas',
+        component:MatematicasComponent
+      },
+      {
+        path:'view/libros',
+        component:LibrosComponent
+      },
+      {
+        path:'view/materias',
+        component:MateriasComponent
+      },
+      {
+        path:'view/firmar',
+        component:FirmarComponent
+      },
+    ]
   },
   {
     path:'view/footer',
@@ -47,12 +55,22 @@ const routes: Routes = [
     component:ChatbotComponent
   },
   {
-    path:'view/firmar',
-    component:FirmarComponent
+    path:'view/registrarse',
+    component:RegisterFormComponent,
+    outlet: 'navigationOut'
   },
   {
-    path:'view/registrarse',
-    component:RegisterFormComponent
+    path:'view/dashboardMain',
+    component:SideNavMaterialComponent
+  },
+  {
+    path:'view/login',
+    component:LoginFormComponent
+  },
+  {
+    path: '', 
+    pathMatch: 'full', 
+    redirectTo: 'view/login'
   }
 
 

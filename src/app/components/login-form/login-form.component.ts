@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms'
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 
@@ -18,7 +19,7 @@ export class LoginFormComponent implements OnInit {
   usuarios: any = [];
 
   //loginForm : FormGroup;
-  constructor( private usuarioService: UsuariosService) { }
+  constructor( private usuarioService: UsuariosService, private router: Router) { }
 
   ngOnInit(): void {
     // this.loginForm = new FormGroup({
@@ -40,7 +41,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   iniciarSesion(){
-    
+    this.router.navigate(['/view/dashboard']);
   }
 
 }
