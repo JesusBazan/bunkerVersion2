@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
+import { from } from 'rxjs';
 import { Respuesta } from 'src/app/models/respuesta';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioLog } from 'src/app/models/usuarioLog';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
+import { NotificationsService} from 'angular2-notifications'
+//import { title } from 'node:process';
 
 @Component({
   selector: 'app-login-form',
@@ -28,7 +31,7 @@ export class LoginFormComponent implements OnInit {
   reponse: any = [];
 
   //loginForm : FormGroup;
-  constructor(private usuarioService: UsuariosService, private router: Router) { }
+  constructor(private usuarioService: UsuariosService, private router: Router, private service: NotificationsService) { }
 
   ngOnInit(): void {
     // this.loginForm = new FormGroup({
@@ -51,13 +54,28 @@ export class LoginFormComponent implements OnInit {
     )
   }
 
+  onError(){
+    this.service.error('Error', 'Credenciales incorrectas', {
+      position: ['top','left'],
+      timeOut: 2000,
+      animate: 'fade',
+      showProgresBar: true
+    });
+  }
+
   iniciarSesion() {
-    this.router.navigate(['/view/dashboard']);
+    
     this.usuarioService.iniciarSesion(this.usuariosLog).subscribe(
       res => {
         console.log(this.usuariosLog)
         this.reponse = res;
         console.log(this.reponse[0].res)
+        if(this.reponse[0].res == 1){
+          this.router.navigate(['/view/dashboard']);
+        }
+        else{
+          this.onError();
+        }
 
       },
       err => {
