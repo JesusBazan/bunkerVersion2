@@ -28,6 +28,8 @@ export class LoginFormComponent implements OnInit {
     contrasenia: ""
   }
 
+  
+
   reponse: any = [];
 
   //loginForm : FormGroup;
@@ -56,7 +58,7 @@ export class LoginFormComponent implements OnInit {
 
   onError(){
     this.service.error('Error', 'Credenciales incorrectas', {
-      position: ['top','left'],
+      position: ["bottom", "left"],
       timeOut: 2000,
       animate: 'fade',
       showProgresBar: true

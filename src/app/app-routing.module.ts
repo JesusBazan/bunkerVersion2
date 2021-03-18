@@ -56,8 +56,7 @@ const routes: Routes = [
   },
   {
     path:'view/registrarse',
-    component:RegisterFormComponent,
-    outlet: 'navigationOut'
+    component:RegisterFormComponent
   },
   {
     path:'view/dashboardMain',
