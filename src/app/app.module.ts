@@ -41,6 +41,8 @@ import { FirmarComponent } from './components/firmar/firmar.component';
 import { from } from 'rxjs';
 
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { ProfVanBarComponent } from './prof-van-bar/prof-van-bar.component';
+import { AddNewFormComponent } from './components/add-new-form/add-new-form.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { RegisterFormComponent } from './components/register-form/register-form.
     ChatbotComponent,
     FirmarComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ProfVanBarComponent,
+    AddNewFormComponent
 
   ],
   imports: [

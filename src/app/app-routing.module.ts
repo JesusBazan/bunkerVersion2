@@ -13,6 +13,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { FirmarComponent } from './components/firmar/firmar.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { SideNavMaterialComponent} from './side-nav-material/side-nav-material.component';
+import { ProfVanBarComponent } from './prof-van-bar/prof-van-bar.component'
 import { LoginFormComponent } from './components/login-form/login-form.component'
 
 const routes: Routes = [
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path:'view/dashboardMain',
     component:SideNavMaterialComponent
+  },
+  {
+    path:'view/dashboardMainProf',
+    component:ProfVanBarComponent
   },
   {
     path:'view/login',
