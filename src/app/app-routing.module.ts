@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { from } from 'rxjs';
 
 import {DashboardComponent} from './components/dashboard/dashboard.component'
+import { DashboardCoorComponent } from './components/dashboard-coor/dashboard-coor.component'
+import { DashboardProfComponent } from './components/dashboard-prof/dashboard-prof.component'
 import {MatematicasComponent} from './components/matematicas/matematicas.component'
 import {NewsComponent} from './components/news/news.component'
 import {LibrosComponent} from './components/libros/libros.component'
@@ -46,6 +48,14 @@ const routes: Routes = [
         component:FirmarComponent
       },
     ]
+  },
+  {
+    path:'view/dashboardProf',
+    component:DashboardProfComponent
+  },
+  {
+    path:'view/dashboardCoor',
+    component:DashboardCoorComponent
   },
   {
     path:'view/footer',

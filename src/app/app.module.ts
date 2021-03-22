@@ -43,6 +43,9 @@ import { from } from 'rxjs';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProfVanBarComponent } from './prof-van-bar/prof-van-bar.component';
 import { AddNewFormComponent } from './components/add-new-form/add-new-form.component';
+import { DashboardProfComponent } from './components/dashboard-prof/dashboard-prof.component';
+import { DashboardCoorComponent } from './components/dashboard-coor/dashboard-coor.component';
+import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { AddNewFormComponent } from './components/add-new-form/add-new-form.comp
     LoginFormComponent,
     RegisterFormComponent,
     ProfVanBarComponent,
-    AddNewFormComponent
+    AddNewFormComponent,
+    DashboardProfComponent,
+    DashboardCoorComponent,
+    CoorNavBarComponent
 
   ],
   imports: [
