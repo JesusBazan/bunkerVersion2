@@ -1,0 +1,30 @@
+.form {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  opacity: 99%;
+  width: 400px;
+  margin: 100px auto 100px;
+  padding: 10px 45px 30px 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  height: 500px;
+}
+
+.inputReg {
+  width: 80%;
+}
+
+.tagRegister {
+  font-size: x-large;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btnRegister {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}

@@ -1,0 +1,35 @@
+
+  <div class="form">
+
+    <p class="tagLogin">Bunker</p>
+
+    <form class="example-form">
+      <mat-form-field class="inputLog">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="" name="usernameLog" [(ngModel)]="usuariosLog.username">
+      </mat-form-field>
+    
+      <!-- <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field> -->
+
+      <mat-form-field class="inputLog">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="usuariosLog.contrasenia" name="contraseniaLog">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="btnEntrar" (click)="iniciarSesion()">entrar</button>
+
+      <a class="tagNoCount" routerLink="/view/registrarse" routerLinkActive="active">¿aun no tienes una cuenta?</a>
+      <br/>
+      <a class="tagPasswordForget">olvide mi contraseña</a>
+
+      <simple-notifications ></simple-notifications>
+    </form>
+    
+  </div>
+  

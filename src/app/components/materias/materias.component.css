@@ -1,0 +1,28 @@
+.cards_container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cards_test {
+  min-width: 100;
+  min-height: 100;
+  background-color: rgb(218, 97, 97);
+}
+
+.example-card {
+  max-width: 395px;
+  margin: 20px;
+  float: left;
+}
+
+.example-card mat-card-footer {
+  font-size: large;
+  justify-content: center;
+  padding: 10px;
+}
+
+.general_page {
+  background-color: brown;
+  max-width: 100%;
+}
