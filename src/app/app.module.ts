@@ -36,6 +36,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { LoginFormComponent} from './components/login-form/login-form.component'
 import { SimpleNotificationsModule} from 'angular2-notifications'
 
+
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { FirmarComponent } from './components/firmar/firmar.component';
 import { from } from 'rxjs';
@@ -79,7 +80,6 @@ import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    BrowserAnimationsModule,
     MatListModule,
     MatCardModule,
     FormsModule,
@@ -89,7 +89,11 @@ import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
     BrowserModule,
     MatInputModule,
     MatFormFieldModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    
+    
 
   ],
   providers: [
