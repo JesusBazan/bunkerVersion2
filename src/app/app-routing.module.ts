@@ -17,6 +17,7 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 import { SideNavMaterialComponent} from './side-nav-material/side-nav-material.component';
 import { ProfVanBarComponent } from './prof-van-bar/prof-van-bar.component'
 import { LoginFormComponent } from './components/login-form/login-form.component'
+import { EncDesComponent } from './components/enc-des/enc-des.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
       {
         path:'view/firmar',
         component:FirmarComponent
+      },
+      {
+        path:'view/encriptardesencriptar',
+        component:EncDesComponent
       },
     ]
   },

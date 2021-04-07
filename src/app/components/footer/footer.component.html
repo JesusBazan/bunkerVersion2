@@ -1,317 +1,89 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-
-  <script type='text/javascript'>
-    $(document).ready(function () {
-      $('.count').hide();
-
-      $('.sociallink').hover(
-        function () {
-          // Set Hover Color
-          social_id = $(this).find('.social').attr('id');
-          switch (social_id) {
-            case 'twitter':
-              new_textcolor = '#55d4ff';
-              new_text = 'Twitter friends';
-              break;
-            case 'facebook':
-              new_textcolor = '#354970';
-              new_text = 'Facebook friends';
-              break;
-            case 'dribbble':
-              new_textcolor = '#b73567';
-              new_text = 'Facebook friends';
-              break;
-            case 'rss':
-              new_textcolor = '#db6610';
-              new_text = 'RSS Subscribers';
-              break;
-            case 'googleplus':
-              new_textcolor = '#383638';
-              new_text = 'Google+ friends';
-              break;
-            case 'forrst':
-              new_textcolor = '#315c23';
-              new_text = 'Forrst friends';
-              break;
-          }
-
-          $(this).find('.button').stop().animate({
-            'left': '119px'
-          }, 700);
-          $(this).find('span').stop().animate({
-            'margin-left': '5px',
-            'color': new_textcolor
-          }, 500);
-          $(this).find('.social').stop().animate({
-            backgroundColor: '#fcfcfc'
-          }, 500);
-
-          $(this).find('span').text(new_text);
-
-          $(this).find('.count').stop().fadeIn("slow");
-
-        },
-        function () {
-          social_id = $(this).find('.social').attr('id');
-          switch (social_id) {
-            case 'twitter':
-              new_bgcolor = '#55d4ff';
-              new_text = 'Follow on Twitter';
-              break;
-            case 'facebook':
-              new_bgcolor = '#354970';
-              new_text = 'Follow on Facebook';
-              break;
-            case 'dribbble':
-              new_bgcolor = '#b73567';
-              new_text = 'Follow on Dribbble';
-              break;
-            case 'rss':
-              new_bgcolor = '#db6610';
-              new_text = 'Subscribe via RSS';
-              break;
-            case 'googleplus':
-              new_bgcolor = '#383638';
-              new_text = 'Follow on Google+';
-              break;
-            case 'forrst':
-              new_bgcolor = '#315c23';
-              new_text = 'Follow on Forrst';
-              break;
-          }
-
-          $(this).find('.button').stop().animate({
-            'left': '0'
-          }, 700);
-          $(this).find('span').stop().animate({
-            'margin-left': '30px',
-            'color': '#ffffff'
-          }, 600);
-          $(this).find('.social').stop().animate({
-            backgroundColor: new_bgcolor
-          }, 500);
-
-          $(this).find('span').text(new_text);
-
-          $(this).find('.count').stop().fadeOut("slow");
-        });
-    });
-  </script>
-
+    <title>Footer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
-<footer class="footer-area footer--light">
-  <div class="footer-big">
-    <!-- start .container -->
+
+<footer class="container-fluid bg-grey py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-12">
-          <div class="footer-widget">
-            <div class="widget-about">
-              <img src="assets\images\a.jpeg" alt="" class="img-fluid" width="200px" height="200px">
-              <p>Corporativo, consultor, desarrollador e integrador de soluciones tecnológicas.</p>
-
-
-              <ul class="contact-details">
-                <li>
-                  <span class="icon-earphones"></span> Contactar ahora:
-                  <a href="tel:(55)5235 5159">(55) 5235 5159</a>
-                </li>
-                <li>
-                  <span class="icon-envelope-open"></span>
-                  <a href="mailto:info@zkitofficial.com">info@zkitofficial.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- end /.col-md-4 -->
-          <div class="col-md-3 col-sm-4">
-            <div class="footer-widget">
-              <div class="footer-menu footer-menu--1">
-                <h4 class="footer-widget-title">Nuestros servicios</h4>
-                <ul>
-                  <li>
-                    <a href="#">SEGURIDAD INFORMÁTICA</a>
-                  </li>
-                  <li>
-                    <a href="#">FÁBRICA DE SOFTWARE</a>
-                  </li>
-                  <li>
-                    <a href="#">GESTIÓN ESCOLAR</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- end /.footer-menu -->
-
-              <!-- Ends: .footer-widget -->
-            </div>
-            <!-- end /.col-md-4 -->
-            <div class="col-md-3 col-sm-4">
-              <div class="footer-widget">
-                <div class="footer-menu footer-menu--1">
-                  <h4 class="footer-widget-title">SERVICIOS</h4>
-                  <ul>
-                    <li>
-                      <a href="http://localhost:4200/view/libros">SEGURIDAD INFORMÁTICA</a>
-                    </li>
-                    <li>
-                      <a href="http://localhost:4200/view/firmar">FÁBRICA DE SOFTWARE</a>
-                    </li>
-                    <li>
-                      <a href="http://localhost:4200/view/firmar">GESTIÓN ESCOLAR</a>
-                    </li>
-                  </ul>
-
-                </div>
-                <!-- end /.footer-menu -->
-              </div>
-              <!-- Ends: .footer-widget -->
-            </div>
-            <!-- end /.col-md-3 -->
-
-            <div class="col-md-3 col-sm-4">
-              <div class="footer-widget">
-                <div class="footer-menu">
-                  <h4 class="footer-widget-title">Nosotros</h4>
-                  <ul>
-                    <li>
-                      <a href="http://localhost:4200/view/inicio">QUIENES SOMOS</a>
-                    </li>
-                    <li>
-                      <a href="http://localhost:4200/view/inicio">¿Quién es ASKIT?</a>
-                    </li>
-                    <li>
-                      <a href="http://localhost:4200/view/inicio">Nuestro Objetivo</a>
-                    </li>
-                    <li>
-                      <a href="http://localhost:4200/view/inicio">SERVICIOS</a>
-                    </li>
-                    <li>
-                      <a href="http://localhost:4200/view/inicio">Contactanos</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- end /.footer-menu -->
-              </div>
-
-              <!-- end /.col-lg-3 -->
-
-              <div class="col-md-3 col-sm-4">
-                <div class="footer-widget">
-                  <div class="footer-menu no-padding">
-                    <h4 class="footer-widget-title">Hola que hace a qui va un formulario o nose</h4>
-                    <ul>
-                      <li>
-                        <a href="#">Support Forum</a>
-                      </li>
-                      <li>
-                        <a href="#">Terms &amp; Conditions</a>
-                      </li>
-                      <li>
-                        <a href="#">Support Policy</a>
-                      </li>
-                      <li>
-                        <a href="#">Refund Policy</a>
-                      </li>
-                      <li>
-                        <a href="#">FAQs</a>
-                      </li>
-                      <li>
-                        <a href="#">Buyers Faq</a>
-                      </li>
-                      <li>
-                        <a href="#">Sellers Faq</a>
-                      </li>
-                    </ul>
-
-                    <!-- Ends: .footer-widget -->
-                  </div>
-                  <!-- end /.col-lg-3 -->
-
-                  <div class="col-md-3 col-sm-4">
-                    <div class="footer-widget">
-                      <div class="footer-menu no-padding">
-                        <h4 class="footer-widget-title">Contactanos</h4>
-                        <div class="wrap">
-                          <a href="https://twitter.com/" class="sociallink">
-                            <div id="twitter" class="social" style="background-color: rgb(85, 212, 255);">
-                              <div class="button" style="left: 0px;">
-                              </div>
-                              <span style="color: rgb(255, 255, 255); margin-left: 30px;">Seguir en Twitter</span>
-                              <div class="count" style="display: none; opacity: 1;">
-                                160</div>
-                            </div>
-                          </a>
-                          <br />
-                          <br />
-                          <a href="https://www.facebook.com/" class="sociallink">
-                            <div id="facebook" class="social" style="background-color: rgb(53, 73, 112);">
-                              <div class="button" style="left: 0px;">
-                              </div>
-                              <span style="color: rgb(255, 255, 255); margin-left: 30px;">Seguir en Facebook</span>
-                              <div class="count" style="display: none; opacity: 1;">
-                                2615</div>
-                            </div>
-                          </a>
-                          <br />
-                          <br />
-                          <a href="http://feeds.feedburner.com/" class="sociallink">
-                            <div id="rss" class="social" style="background-color: rgb(219, 102, 16);">
-                              <div class="button" style="left: 0px;">
-                              </div>
-                              <span style="color: rgb(255, 255, 255); margin-left: 30px;">Suscribe vía RSS</span>
-                              <div class="count" style="display: none; opacity: 1;">
-                                33</div>
-                            </div>
-                          </a>
-                          <br />
-                          <br />
-                          <a href="https://plus.google.com/" class="sociallink">
-                            <div id="googleplus" class="social" style="background-color: rgb(56, 54, 56);">
-                              <div class="button" style="left: 0px;">
-                              </div>
-                              <span style="color: rgb(255, 255, 255); margin-left: 30px;">Seguir en Google+</span>
-                              <div class="count" style="display: none; opacity: 1;">
-                                5</div>
-                            </div>
-                          </a>
-                          <br />
-                          <br />
-
-                        </div>
-                      </div>
-                      <!-- end /.footer-menu -->
-                    </div>
-                    <!-- Ends: .footer-widget -->
-                  </div>
-                  <!-- Ends: .col-lg-3 -->
-
-                </div>
-                <!-- end /.row -->
-              </div>
-              <!-- end /.container -->
-            </div>
-            <!-- end /.footer-big -->
-
-            <div class="mini-footer">
-              <div class="container">
+        <div class="row">
+            <div class="col-md-6">
                 <div class="row">
-                  <div class="col-md-12">
-                    <div class="copyright-text">
-                      <p>© {{ano}}
-                        <a href="http://localhost:4200/view/inicio">ASKIT</a>. All rights reserved. Created by
-                        <a href="http://localhost:4200/view/inicio">ASKIT</a>
-                      </p>
+                    <div class="col-md-6 ">
+                        <div class="logo-part">
+                            <img src="assets/images/LOGO1.png" class="w-50 logo-footer">
+                            <p>Azkit</p>
+                            <p>Somos una empresa 100% mexicana que cuenta con más de 10 años de experiencia siendo líder en la investigación y desarrollo en TI. Generando las mejores soluciones corporativas adaptadas a las necesidades que requiere cada instituciòn.</p>
+                        </div>
                     </div>
-
-
-                  </div>
+                    <div class="col-md-6 px-4">
+                        <h4> Acerca de nosotros</h4>
+                        <p>Somos una empresa 100% mexicana que cuenta con más de 10 años de experiencia siendo líder en la investigación y desarrollo en TI.</p>
+                        <a href="http://localhost:4200/view/dashboard/view/inicio" class="btn-footer"> Más información </a><br>
+                        <a href="http://localhost:4200/view/dashboard/view/inicio" class="btn-footer"> Contactanos</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 px-4">
+                        <h4> AYUDA</h4>
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li> <a href="http://localhost:4200/view/dashboard/view/inicio"> INICIO</a> </li>
+                                    <li> <a href="http://localhost:4200/view/dashboard/view/inicio"> NOSOTROS</a> </li>
+                                    <li> <a href="http://localhost:4200/view/dashboard/view/inicio"> SERVICIOS</a> </li>
+                                    <li> <a href="http://localhost:4200/view/dashboard/view/inicio"> CONTACTANOS</a> </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 px-0">
+                                <ul>
+                                    
+                                    <li> <a href="#"> Seguridad informàtica </a> </li>
+                                    <br>
+                                    <li> <a href="#"> Software  </a> </li>
+                                    <br>
+                                    <li> <a href="#"> Gestiòn escolar  </a> </li>
+                                    <br>
+                                    <li> <a href="#"> Terminos y condiciones</a> </li>
+                                    <br>
+                                    <li> <a href="#"> Politica de privacidad</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <h3> SIGUENOS EN</h3>
+                        <div class="social">
+                            <a href="https://www.facebook.com/AZKIT-106156194919597/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            
+                            <a href="https://www.instagram.com/azkit_oficial/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                        <form class="form-footer my-3">
+                            <input type="text" placeholder="Buscar...." name="search">
+                            <input type="button" value="Go">
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    
 </footer>

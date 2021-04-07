@@ -1,220 +1,93 @@
-@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700);
 body {
- font-family:Rubik,sans-serif;
- position:relative;
- font-weight:400;
- font-size:15px
+  font-family: 'Signika', sans-serif;
 }
-ul {
- padding:0;
- margin:0
+.bg-grey {
+  background: #455196;
 }
-li {
- list-style:none
+.logo-footer {
+  margin-bottom: 40px;
 }
-a:focus,a:hover {
- text-decoration:none;
- -webkit-transition:.3s ease;
- -o-transition:.3s ease;
- transition:.3s ease
+footer {
+      color: rgb(255, 255, 255);
 }
-a:focus {
- outline:0
+footer p, a {
+font-size: 12px;
+font-family: 'Roboto', sans-serif;
 }
-img {
- max-width:100%
+footer h6 {
+font-family: 'Playfair Display', serif;
+margin-bottom: 40px;
+position: relative;
 }
-p {
- font-size:16px;
- line-height:30px;
- color:#898b96;
- font-weight:300
+footer h6:after {
+position: absolute;
+content: "";
+background: rgb(250, 249, 249);
+width: 12%;
+height: 1px;
+left: 0;
+bottom: -20px;
 }
-h4 {
- font-family:Rubik,sans-serif;
- margin:0;
- font-weight:400;
- padding:0;
- color:#5867dd
+.btn-footer {
+           color: rgb(255, 255, 255);
+        
+          text-decoration: none;
+          border: 1px solid;
+          border-radius: 43px;
+          font-size: 13px;
+          padding: 7px 30px;
+          line-height: 47px;
 }
-a {
- color:#5867dd
+.btn-footer:hover {
+          
+          text-decoration: none;
+         
 }
-.no-padding {
- padding:0!important
-}
-.go_top {
- line-height:40px;
- cursor:pointer;
- width:40px;
- background:#5867dd;
- color:#fff;
- position:fixed;
- -webkit-box-shadow:0 4px 4px rgba(0,0,0,.1);
- box-shadow:0 4px 4px rgba(0,0,0,.1);
- -webkit-border-radius:50%;
- border-radius:50%;
- right:-webkit-calc((100% - 1140px)/ 2);
- right:calc((100% - 1140px)/ 2);
- z-index:111;
- bottom:80px;
- text-align:center
-}
-.go_top span {
- display:inline-block
-}
-.footer-big {
- padding:105px 0 65px 0
-}
-.footer-big .footer-widget {
- margin-bottom:40px
-}
-.footer--light {
- background:#e7e8ed
-}
-.footer-big .footer-menu ul li a,.footer-big p,.footer-big ul li {
- color:#898b96
-}
-.footer-menu {
- padding-left:48px
-}
-.footer-menu ul li a {
- font-size:15px;
- line-height:32px;
- -webkit-transition:.3s;
- -o-transition:.3s;
- transition:.3s
-}
-.footer-menu ul li a:hover {
- color:#5867dd
-}
-.footer-menu--1 {
- width:100%
-}
-.footer-widget-title {
- line-height:42px;
- margin-bottom:10px;
- font-size:18px
-}
-.mini-footer {
- background:#252d7a;
- text-align:center;
- padding:32px 0
-}
-.mini-footer p {
- margin:0;
- line-height:26px;
- font-size:15px;
- color:#999
-}
-.mini-footer p a {
- color:#5867dd
-}
-.mini-footer p a:hover {
- color:#34bfa3
-}
-.widget-about img {
- display:block;
- margin-bottom:30px
-}
-.widget-about p {
- font-weight:400
-}
-.widget-about .contact-details {
- margin:30px 0 0 0
-}
-.widget-about .contact-details li {
- margin-bottom:10px
-}
-.widget-about .contact-details li:last-child {
- margin-bottom:0
-}
-.widget-about .contact-details li span {
- padding-right:12px
-}
-.widget-about .contact-details li a {
- color:#5867dd
-}
-@media (max-width:991px) {
- .footer-menu {
-  padding-left:0
- }
-}
-.social {
-  border-radius: 30px;
-  position: relative;
-  width: 150px;
-  height: 32px;
-  box-shadow: inset -1px 1px 1px 0px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-}
+.form-footer input[type="text"] {
+  border: none;
+border-radius: 16px 0 0 16px;
+outline: none;
+padding-left: 10px;
 
-.social .count {
-  width: 58px;
-  height: 31px;
-  background: url(http://i83.photobucket.com/albums/j295/woratana/bubble.png) no-repeat;
-  position: absolute;
-  top: 0;
-  right: -65px;
-  line-height: 31px;
-  text-align: center;
-  text-indent: 8px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #868686;
 }
-
-.social span {
-  font-size: 12px;
-  color: #fff;
-  line-height: 30px;
-  display: block;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-  margin-left: 30px;
-  text-align: center;
-  width: 120px;
+::placeholder {
+font-size: 10px;
+padding-left: 10px;
+font-style: italic;
 }
-
-.social .button {
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  position: absolute;
-  left: 0;
+.form-footer input[type="button"] {
+border: none;
+background:#e63212;
+  margin-left: -5px;
+color: #fff;
+outline: none;
+border-radius: 0 16px 16px 0;
+padding: 2px 12px;
 }
-
-#twitter.social {
-  background: #55d4ff;
+.social .fa {
+color: rgb(255, 255, 255);
+font-size: 22px;
+padding: 10px 15px;
+background: #242322;
 }
-
-#twitter .button {
-  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/twitter.png) 5px 5px no-repeat;
-  border: 1px solid #53d4ff;
+footer ul li {
+list-style: none;
+display: block;
 }
-
-#facebook.social {
-  background: #354970;
+footer ul  {
+padding-left: 0;
 }
-
-#facebook .button {
-  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/facebook.png) 5px 5px no-repeat;
-  border: 1px solid #354970;
+footer ul  li a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+text-decoration:none;
 }
+a:hover {
+text-decoration: none;
+color: #f5f5f5 !important;
 
-#rss.social {
-  background: #db6610;
 }
-
-#rss .button {
-  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/rss.png) 5px 5px no-repeat;
-  border: 1px solid #db6610;
-}
-
-#googleplus.social {
-  background: #383638;
-}
-
-#googleplus .button {
-  background: #fff url(http://i83.photobucket.com/albums/j295/woratana/googleplus.png) 5px 5px no-repeat;
-  border: 1px solid #383638;
+.logo-part {
+border-right: 1px solid rgb(255, 252, 252);
+height: 100%;
 }

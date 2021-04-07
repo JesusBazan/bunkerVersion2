@@ -47,6 +47,7 @@ import { AddNewFormComponent } from './components/add-new-form/add-new-form.comp
 import { DashboardProfComponent } from './components/dashboard-prof/dashboard-prof.component';
 import { DashboardCoorComponent } from './components/dashboard-coor/dashboard-coor.component';
 import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
+import { EncDesComponent } from './components/enc-des/enc-des.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
     AddNewFormComponent,
     DashboardProfComponent,
     DashboardCoorComponent,
-    CoorNavBarComponent
+    CoorNavBarComponent,
+    EncDesComponent
 
   ],
   imports: [
