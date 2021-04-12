@@ -48,6 +48,7 @@ import { DashboardProfComponent } from './components/dashboard-prof/dashboard-pr
 import { DashboardCoorComponent } from './components/dashboard-coor/dashboard-coor.component';
 import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
 import { EncDesComponent } from './components/enc-des/enc-des.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -94,6 +95,7 @@ import { EncDesComponent } from './components/enc-des/enc-des.component';
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule    
     
     
 
