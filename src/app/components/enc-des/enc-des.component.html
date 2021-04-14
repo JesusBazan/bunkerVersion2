@@ -1,18 +1,19 @@
 <br>
 <div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <h1 style="text-align: center;">
-        Encriptar
+        Encriptar 
       </h1>
       <br>
       <div class="form-group">
         <br>
         <br>
-
+        <label>Tipo de encriptado</label>
+        <br>
         <!-- Select  dinamico -->
 
-        <select [(ngModel)]="selectedcifrado.id" (change)="onSelect($any($event.target).value)">
+        <select [(ngModel)]="selectedcifrado.id" (change)="onSelect($any($event.target).value)" style="animation: alternate;">
           <option *ngFor="let cifrado of cifradoss" value="{{cifrado.id}}">
             {{cifrado.name}}
 
@@ -28,19 +29,23 @@
    
 
         <br>
+        <!-- vector -->
+        <div class="form-group">
+          <label for="txtPassword">Clave</label>
+          <input type="password" class="form-control" placeholder="Ingresa llave de encripción" [(ngModel)]="encPass">
+        </div>
+                <!-- texto -->
         <label>Texto </label>
         <input type="text" class="form-control" placeholder="Ingresa texto a encriptar" [(ngModel)]="enctexto">
       </div>
 
-      <div class="form-group">
-        <label for="txtPassword">Clave</label>
-        <input type="password" class="form-control" placeholder="Ingresa llave de encripción" [(ngModel)]="encPass">
-      </div>
+<Label>Resultado</Label>
       <textarea class="form-control" readonly rows="1">{{textoEncriptado}} {{textoDesencriptado}}</textarea>
       <br>
       <button type="button" class="btn btn-success float-right" (click)="convertirTexto('encriptar')">Encriptar</button>
       <button type="button" class="btn btn-success float-right"
         (click)="convertirTexto('desencriptar')">Desencriptar</button>
+      <button type="button" class="btn btn-success float-right">Resetiar</button>
     </div>
   </div>
 </div>

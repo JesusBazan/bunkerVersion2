@@ -64,6 +64,7 @@ export class DataService {
 
   }
   getTipos():TipoS[]{
+    
     return this.tipos;
   }
 }

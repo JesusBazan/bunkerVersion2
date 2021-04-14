@@ -36,6 +36,7 @@ export class EncDesComponent implements OnInit {
   public cifradoss: CifradoS[] = [];
   public tiposs: TipoS[] = [];
   //metodos para encriptar en espera RSA
+  
   convertirTexto(conversion: string) {
     if (conversion === 'encriptar') {
 
@@ -62,9 +63,16 @@ export class EncDesComponent implements OnInit {
 
   onSelect(id: number): void {
     console.log('Id', id);
-    this.tiposs = this.dataSvc.getTipos().filter(item => item.tipoId = id);
+    this.tiposs = this.dataSvc.getTipos().filter(item => item.tipoId == id);
+
+ console.log('hola',this.dataSvc.getTipos().filter(item => item.tipoId == id));
+ 
+
+    
+
 
   }
+
 
 }
 
