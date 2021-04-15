@@ -7,7 +7,7 @@ export class DataService {
   private cifrados: CifradoS[]=[
     {
       id:1,
-      name:'Cifrado Simetrico'
+      name:'Cifrado Simétrico'
     },
     {
       id:2,
@@ -15,7 +15,7 @@ export class DataService {
     },
     {
       id:3,
-      name:'Cifrado asimetrico'
+      name:'Cifrado Asimétrico'
     }
   ];
   private tipos : TipoS[]=[
@@ -32,17 +32,17 @@ export class DataService {
     {
       id:3,
       tipoId:2,
-      name:'HASH1'     
+      name:'SHA 1'     
     },
     {
       id:4,
       tipoId:2,
-      name:'HASH256'     
+      name:'SHA 256'     
     },
     {
       id:5,
       tipoId:2,
-      name:'HASH512'     
+      name:'SHA 512'     
     },
     {
       id:6,

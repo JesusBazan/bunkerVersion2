@@ -1,51 +1,89 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <div>
+    <br>
+    <br>
+    <br>
+  </div>
 <br>
-<div>
-  <div class="row">
-    <div class="col-sm-8">
-      <h1 style="text-align: center;">
-        Encriptar 
+<div class="container justify-content-center">
+  <div class="container justify-content-center">
+    <div class="container justify-content-center lg-col-6">
+      <h1 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 40px; ">
+        ENCRIPTAR & DESENCIPTAR
       </h1>
       <br>
       <div class="form-group">
         <br>
         <br>
-        <label>Tipo de encriptado</label>
-        <br>
+        <h2>TIPO DE ENCRIPTADO </h2>
+
         <!-- Select  dinamico -->
 
-        <select [(ngModel)]="selectedcifrado.id" (change)="onSelect($any($event.target).value)" style="animation: alternate;">
-          <option *ngFor="let cifrado of cifradoss" value="{{cifrado.id}}">
-            {{cifrado.name}}
+        <div class="container">
+          <div class="row">
+            <div class="col text-center" >
+              <select [(ngModel)]="selectedcifrado.id" (change)="onSelect($any($event.target).value)"
+                class="form-group col-form-label-sm col-lg-5">
+                <option *ngFor="let cifrado of cifradoss" value="{{cifrado.id}}" class="form-control">
+                  {{cifrado.name}}
 
-          </option>
-        </select>
 
-        <select >
-          <option *ngFor="let tipo of tiposs" value={{tipo.id}}>
-            {{tipo.name}}
+                </option>
+              </select>
+              &nbsp;
+              <select class="form-group col-form-label-sm col-lg-6">
+                <option *ngFor="let tipo of tiposs" value={{tipo.id}} class="form-control">
+                  {{tipo.name}}
 
-          </option>
-        </select>
-   
-
-        <br>
-        <!-- vector -->
-        <div class="form-group">
-          <label for="txtPassword">Clave</label>
-          <input type="password" class="form-control" placeholder="Ingresa llave de encripción" [(ngModel)]="encPass">
+                </option>
+              </select>
+            </div>
+          </div>
         </div>
-                <!-- texto -->
-        <label>Texto </label>
-        <input type="text" class="form-control" placeholder="Ingresa texto a encriptar" [(ngModel)]="enctexto">
+
+        <!-- texto -->
+        <h2>MENSAJE </h2>
+        <input type="text" class="form-control" placeholder="Ingresa texto a encriptar" [(ngModel)]="enctexto" required>
+      </div>
+      <br>
+      <!-- vector -->
+      <div class="form-group">
+        <h2 for="txtPassword">CLAVE</h2>
+        <input type="password" class="form-control" placeholder="Ingresa llave de encripción" [(ngModel)]="encPass"
+          required>
       </div>
 
-<Label>Resultado</Label>
+
+      <h2>RESULTADO</h2>
       <textarea class="form-control" readonly rows="1">{{textoEncriptado}} {{textoDesencriptado}}</textarea>
       <br>
-      <button type="button" class="btn btn-success float-right" (click)="convertirTexto('encriptar')">Encriptar</button>
-      <button type="button" class="btn btn-success float-right"
-        (click)="convertirTexto('desencriptar')">Desencriptar</button>
-      <button type="button" class="btn btn-success float-right">Resetiar</button>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')">Encriptar </button>
+            &nbsp;
+
+            <button type="button" class="btn btn-dark " (click)="convertirTexto('desencriptar')">Desencriptar</button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')">Calcular </button>
+            &nbsp;
+            <button type="button" class="btn btn-dark " > Verficar</button>
+            <br>
+            <br>
+
+            <button type="button" class="btn btn-dark "><a
+                href="http://localhost:4200/view/dashboard/view/encriptardesencriptar"
+                style="color: aliceblue;">Reiniciar</a> </button>
+                <br>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
+  <br>
+  <br>
 </div>
