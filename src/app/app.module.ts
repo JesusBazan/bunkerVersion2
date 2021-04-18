@@ -14,6 +14,10 @@ import{FormsModule,ReactiveFormsModule}from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort'
+
+
 
 
 
@@ -29,7 +33,7 @@ import { MateriasComponent } from './components/materias/materias.component';
 import { LibrosComponent } from './components/libros/libros.component';
 import { NewsComponent } from './components/news/news.component';
 import { CardNewsComponent } from './components/card-news/card-news.component';
-import { AnunciosService} from './services/anuncios/anuncios.service'
+import { AnunciosService} from './services/anuncios/anuncios.service';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
@@ -50,6 +54,7 @@ import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
 import { EncDesComponent } from './components/enc-des/enc-des.component';
 import { CommonModule } from '@angular/common';
 import { ReportesComponent } from './components/reportes/reportes.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +79,8 @@ import { ReportesComponent } from './components/reportes/reportes.component';
     DashboardCoorComponent,
     CoorNavBarComponent,
     EncDesComponent,
-    ReportesComponent
+    ReportesComponent,
+    TableComponent
 
   ],
   imports: [
@@ -94,6 +100,8 @@ import { ReportesComponent } from './components/reportes/reportes.component';
     BrowserModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatSortModule,
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
