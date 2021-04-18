@@ -49,6 +49,7 @@ import { DashboardCoorComponent } from './components/dashboard-coor/dashboard-co
 import { CoorNavBarComponent } from './coor-nav-bar/coor-nav-bar.component';
 import { EncDesComponent } from './components/enc-des/enc-des.component';
 import { CommonModule } from '@angular/common';
+import { ReportesComponent } from './components/reportes/reportes.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { CommonModule } from '@angular/common';
     DashboardProfComponent,
     DashboardCoorComponent,
     CoorNavBarComponent,
-    EncDesComponent
+    EncDesComponent,
+    ReportesComponent
 
   ],
   imports: [
