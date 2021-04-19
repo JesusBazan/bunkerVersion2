@@ -11,6 +11,17 @@ export class UsuariosService {
 
   API_base = 'http://3.135.1.124:3000';
 
+  usuario: Usuario = {
+    id: 0,
+    username: '',
+    nombres: '',
+    apellidos: '',
+    correo: '',
+    rol: 'alumno',
+    contrasenia: '',
+    foto: 'https://stest.billbyte.co/v3.0/dist/img/avatar/default.png'
+  }
+
   constructor(private http : HttpClient) { }
 
   getUsuarios(){
@@ -21,9 +32,9 @@ export class UsuariosService {
 
   }
 
-  insertarUsuario( usuario:Usuario){
-    console.log(this.http.post('/insertarUsuario', usuario))
-    return this.http.post('/insertarUsuario', usuario);
+  insertarUsuario(){
+    console.log(this.http.post('/insertarUsuario', this.usuario))
+    return this.http.post('/insertarUsuario', this.usuario);
   
   }
 
@@ -36,10 +47,12 @@ export class UsuariosService {
   }
 
   actualizarUsuario(){
-
+    console.log(this.http.post('/insertarUsuario', this.usuario))
+    return this.http.post('/insertarUsuario', this.usuario);
   }
 
-  eliminarUsuario(){
-
+  eliminarUsuario( ){
+    var id:any = this.usuario.id;
+    return this.http.delete('/eliminarUsuario/'+id);
   }
 }

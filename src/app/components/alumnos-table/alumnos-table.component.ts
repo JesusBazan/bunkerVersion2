@@ -46,4 +46,14 @@ export class AlumnosTableComponent implements OnInit {
     .subscribe(res => this.dataSource.data = res as UserInformation[]);
   }
 
+  onRowClicked(row:any){
+    this.usuariosService.usuario.id = row.id;
+    this.usuariosService.usuario.username = row.username;
+    this.usuariosService.usuario.nombres = row.nombres;
+    this.usuariosService.usuario.apellidos = row.apellidos;
+    this.usuariosService.usuario.correo = row.correo;
+    this.usuariosService.usuario.contrasenia = row.contrasenia;
+    console.log(row)
+  }
+
 }

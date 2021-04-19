@@ -24,14 +24,14 @@ export class RegisterFormComponent implements OnInit {
 
   
 
-  constructor( private usuariosService:UsuariosService ) { }
+  constructor( public usuariosService:UsuariosService ) { }
 
   ngOnInit(): void {
 
   }
 
   saveNewUser(){
-    this.usuariosService.insertarUsuario(this.usuario).subscribe(
+    this.usuariosService.insertarUsuario().subscribe(
       res => {
         console.log(res);
       },

@@ -59,6 +59,8 @@ import { TableComponent } from './components/table/table.component';
 import { AlumnoComponent } from './components/alumno/alumno.component';
 import { SelectionTableComponent } from './components/selection-table/selection-table.component';
 import { AlumnosTableComponent } from './components/alumnos-table/alumnos-table.component';
+import { AlumnoFormComponent } from './components/alumno-form/alumno-form.component';
+import { ProfesorFormComponent } from './components/profesor-form/profesor-form.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,9 @@ import { AlumnosTableComponent } from './components/alumnos-table/alumnos-table.
     TableComponent,
     AlumnoComponent,
     SelectionTableComponent,
-    AlumnosTableComponent
+    AlumnosTableComponent,
+    AlumnoFormComponent,
+    ProfesorFormComponent
 
   ],
   imports: [
