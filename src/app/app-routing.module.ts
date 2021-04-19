@@ -57,10 +57,8 @@ const routes: Routes = [
     ]
   },
   {
-
     path: 'view/dashboardProf',
     component: DashboardProfComponent,
-
     children: [
       {
         path:'view/inicio/pro',
@@ -74,12 +72,34 @@ const routes: Routes = [
         path:'view/alumnos',
         component:AlumnoComponent
       },
+      {
+        path: 'view/firmar/pro',
+        component: FirmarComponent
+      },
+      {
+        path: 'view/encriptardesencriptar/pro',
+        component: EncDesComponent
+      },
     ]
 
   },
   {
     path: 'view/dashboardCoor',
-    component: DashboardCoorComponent
+    component: DashboardCoorComponent,
+    children: [
+      {
+        path:'view/inicio/Coor',
+        component:InicioComponent
+      },
+      {
+        path:'view/reportes/Coor',
+        component:ReportesComponent
+      },
+      {
+        path:'view/alumnos/Coor',
+        component:AlumnoComponent
+      },
+    ]
   },
   {
     path: 'view/footer',

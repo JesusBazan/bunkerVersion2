@@ -22,6 +22,8 @@ export class UsuariosService {
     foto: 'https://stest.billbyte.co/v3.0/dist/img/avatar/default.png'
   }
 
+  rolUser: number = 0;
+
   constructor(private http : HttpClient) { }
 
   getUsuarios(){

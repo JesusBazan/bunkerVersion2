@@ -75,12 +75,15 @@ export class LoginFormComponent implements OnInit {
         //console.log(this.reponse[0]._roleresult)
         if(this.reponse[0]._roleresult == 1){
           this.router.navigate(['/view/dashboard']);
+          this.usuarioService.rolUser = 1;
         }
         else if(this.reponse[0]._roleresult == 2){
           this.router.navigate(['/view/dashboardProf']);
+          this.usuarioService.rolUser = 2;
         }
         else if(this.reponse[0]._roleresult == 3){
           this.router.navigate(['/view/dashboardCoor']);
+          this.usuarioService.rolUser = 3;
         }
         else{
           this.onError();
