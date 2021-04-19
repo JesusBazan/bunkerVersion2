@@ -73,7 +73,7 @@
 
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
 					<div class="post-media wow fadeIn">
-						<img src="assets\images\2.jpg" alt="" class="img-fluid img-rounded" width="500px"
+						<img src="assets\images\2.jpg" alt="" class="img-fluid img-rounded" width="100%"
 							height="300px">
 					</div><!-- end media -->
 				</div><!-- end col -->
@@ -81,7 +81,7 @@
 			<div class="row align-items-center">
 				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
 					<div class="post-media wow fadeIn">
-						<img src="assets\images\1.jpg" alt="" class="img-fluid img-rounded" width="500px"
+						<img src="assets\images\1.jpg" alt="" class="img-fluid img-rounded" width="100%"
 							height="200px">
 					</div><!-- end media -->
 				</div><!-- end col -->
@@ -100,19 +100,9 @@
 			</div><!-- end row -->
 		</div><!-- end container -->
 	</div><!-- end section -->
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div>
+
+
+
 		<h1 class="title">SERVICIOS</h1>
 
 		<div class="container">
@@ -123,7 +113,11 @@
 				<p>Askit brinda soluciones enfocadas a la Seguridad en Tecnologías de la Información (TI) que garantizan
 					la
 					optima operación y privacidad de las organizaciones.</p>
-				<a href="http://localhost:4200/view/libros">Ir a practicar</a>
+					<button class="btn btn-outline-info" style="size: 1;"
+					routerLink="/view/dashboard/view/encriptardesencriptar">
+			  <i class="fa fa-arrow-circle-left"></i>
+			  Ir a practicar
+			</button>
 			</div>
 
 			<div class="card">
@@ -131,7 +125,11 @@
 				<h4>FÁBRICA DE SOFTWARE</h4>
 				<p>Contamos con una amplia experiencia en desarrollar e integrar soluciones a la medida de los clientes
 					mejorando así la competitividad de nuestros clientes.</p>
-				<a href="http://localhost:4200/view/firmar">Ir a practicar</a>
+					<button class="btn btn-outline-info" style="size: 1;"
+					routerLink="/view/dashboard/view/firmar">
+			  <i class="fa fa-arrow-circle-left"></i>
+			  Ir a practicar
+			</button>
 			</div>
 
 			<div class="card">
@@ -139,32 +137,27 @@
 				<h4>GESTIÓN ESCOLAR</h4>
 				<p>Es una Plataforma dirigida 100% al Sector Educativo, con la que su Institución podrá continuar con el
 					desarrollo y aprendizaje de la comunidad estudiantil.</p>
-				<a href="#">Ir a practicar</a>
+					<button class="btn btn-outline-info" style="size: 1;"
+					routerLink="/view/dashboard/view/libros">
+			  <i class="fa fa-arrow-circle-left"></i>
+			  Ir a practicar
+			</button>
 			</div>
 
 		</div>
 
+	<br>
+
+	<div id="con">
+		<h1 style="text-align: center;">Contactanos </h1>
+		<form>
+			<input name="name" type="text" class="feedback-input" placeholder="Name" />
+			<input name="email" type="text" class="feedback-input" placeholder="Email" />
+			<textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+			<input type="submit" value="SUBMIT" />
+		</form>
 	</div>
-
-	<div>
-		<p></p>
-	</div>
-
-
-<br>
-<br>
-<br>
-
-<div id="con">
-	<h1 style="text-align: center;">Contactanos </h1>
-	<form>      
-		<input name="name" type="text" class="feedback-input" placeholder="Name" />   
-		<input name="email" type="text" class="feedback-input" placeholder="Email" />
-		<textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-		<input type="submit" value="SUBMIT"/>
-	  </form>
-</div>
-<br>
+	<br>
 
 
 
