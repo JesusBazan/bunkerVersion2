@@ -29,6 +29,10 @@ export class UsuariosService {
     return this.http.post('/iniciarSesion',usuarioLog)
   }
 
+  tablaUsuarios( rolObj:any ){
+    return this.http.post('/getTablaUsuarios',rolObj)
+  }
+
   actualizarUsuario(){
 
   }

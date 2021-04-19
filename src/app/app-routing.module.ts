@@ -18,7 +18,8 @@ import { SideNavMaterialComponent} from './side-nav-material/side-nav-material.c
 import { ProfVanBarComponent } from './prof-van-bar/prof-van-bar.component'
 import { LoginFormComponent } from './components/login-form/login-form.component'
 import { EncDesComponent } from './components/enc-des/enc-des.component';
-import { ReportesComponent } from './components/reportes/reportes.component'
+import { ReportesComponent } from './components/reportes/reportes.component';
+import {AlumnoComponent} from './components/alumno/alumno.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
       {
         path:'view/reportes',
         component:ReportesComponent
+      },
+      {
+        path:'view/alumnos',
+        component:AlumnoComponent
       },
     ]
   },
