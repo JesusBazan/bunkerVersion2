@@ -14,6 +14,7 @@ import { NotificationsService} from 'angular2-notifications'
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
+
 export class LoginFormComponent implements OnInit {
 
   hide = true;
