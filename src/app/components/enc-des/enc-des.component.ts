@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import { TipoS } from './../../models/interfaces';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -180,6 +181,7 @@ export class EncDesComponent implements OnInit {
     //---BUSCAMOS ID DE CIFRADO  E ID TIPO DE CIFRADO E EJECUTAMOS METODO
     if (id == 1) {
       if (this.tip == 1) {
+        //LLAMAR METODO
         this.convertirTexto;
 
       }
@@ -223,14 +225,12 @@ export class EncDesComponent implements OnInit {
       }
 
     }
-
     
 
 
 
-
-
   }
+
 
 
 

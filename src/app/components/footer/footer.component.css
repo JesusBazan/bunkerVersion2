@@ -6,6 +6,7 @@ body {
 }
 .logo-footer {
   margin-bottom: 40px;
+  
 }
 footer {
       color: rgb(255, 255, 255);
@@ -23,8 +24,8 @@ footer h6:after {
 position: absolute;
 content: "";
 background: rgb(250, 249, 249);
-width: 12%;
-height: 1px;
+width: 100%;
+height: auto;
 left: 0;
 bottom: -20px;
 }
@@ -88,6 +89,6 @@ color: #f5f5f5 !important;
 
 }
 .logo-part {
-border-right: 1px solid rgb(255, 252, 252);
+border-right: 1px solid rgb(255, 255, 255);
 height: 100%;
 }
