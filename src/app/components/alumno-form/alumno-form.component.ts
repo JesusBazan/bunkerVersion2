@@ -48,6 +48,7 @@ export class AlumnoFormComponent implements OnInit {
   }
 
   saveNewUser(){
+    this.usuariosService.usuario.rol = 'alumno';
     this.usuariosService.insertarUsuario().subscribe(
       res => {
         console.log(res);
@@ -61,6 +62,7 @@ export class AlumnoFormComponent implements OnInit {
   }
 
   updateUser(){
+    this.usuariosService.usuario.rol = 'alumno';
     this.usuariosService.actualizarUsuario().subscribe(
       res => {
         console.log(res);

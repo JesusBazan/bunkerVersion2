@@ -61,6 +61,8 @@ import { SelectionTableComponent } from './components/selection-table/selection-
 import { AlumnosTableComponent } from './components/alumnos-table/alumnos-table.component';
 import { AlumnoFormComponent } from './components/alumno-form/alumno-form.component';
 import { ProfesorFormComponent } from './components/profesor-form/profesor-form.component';
+import { ProfesorTableComponent } from './components/profesor-table/profesor-table.component';
+import { ProfesorComponent } from './components/profesor/profesor.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,9 @@ import { ProfesorFormComponent } from './components/profesor-form/profesor-form.
     SelectionTableComponent,
     AlumnosTableComponent,
     AlumnoFormComponent,
-    ProfesorFormComponent
+    ProfesorFormComponent,
+    ProfesorTableComponent,
+    ProfesorComponent
 
   ],
   imports: [

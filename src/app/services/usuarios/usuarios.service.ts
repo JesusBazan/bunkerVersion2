@@ -35,6 +35,7 @@ export class UsuariosService {
   }
 
   insertarUsuario(){
+    this.usuario.id = 0;
     console.log(this.http.post('/insertarUsuario', this.usuario))
     return this.http.post('/insertarUsuario', this.usuario);
   

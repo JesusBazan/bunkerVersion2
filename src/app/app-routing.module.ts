@@ -20,6 +20,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { EncDesComponent } from './components/enc-des/enc-des.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
 import {AlumnoComponent} from './components/alumno/alumno.component';
+import {ProfesorComponent} from './components/profesor/profesor.component'
 
 const routes: Routes = [
   {
@@ -98,6 +99,10 @@ const routes: Routes = [
       {
         path:'view/alumnos/Coor',
         component:AlumnoComponent
+      },
+      {
+        path:'view/profesores/Coor',
+        component:ProfesorComponent
       },
     ]
   },

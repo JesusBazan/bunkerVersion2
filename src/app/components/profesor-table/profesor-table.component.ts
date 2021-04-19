@@ -18,14 +18,14 @@ export interface UserInformation {
 }
 
 @Component({
-  selector: 'app-alumnos-table',
-  templateUrl: './alumnos-table.component.html',
-  styleUrls: ['./alumnos-table.component.css']
+  selector: 'app-profesor-table',
+  templateUrl: './profesor-table.component.html',
+  styleUrls: ['./profesor-table.component.css']
 })
-export class AlumnosTableComponent implements OnInit {
+export class ProfesorTableComponent implements OnInit {
 
   rolObj: RolObj = {
-    rol: 2
+    rol: 3
   }
 
   ELEMENT_DATA: UserInformation[] = [];
