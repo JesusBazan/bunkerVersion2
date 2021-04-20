@@ -46,6 +46,7 @@ export class EncDesComponent implements OnInit {
   public selectedcifrado: CifradoS = { id: 0, name: '' };
   public cifradoss: CifradoS[] = [];
   public tiposs: TipoS[] = [];
+  
 
   //metodos para encriptar en AES
 
@@ -70,6 +71,7 @@ export class EncDesComponent implements OnInit {
     this.onSelect;
     if (conversion === 'encriptar') {
 
+
       this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
 
     }
@@ -82,6 +84,18 @@ export class EncDesComponent implements OnInit {
   convertirTextoDES(conversion: string) {
     this.onSelect;
     this.hash='DES'
+
+        //operaciones para crear reporte de la accion ejecutada
+        this.reporteService.reporte.accion = conversion;
+        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+        this.reporteService.insertarReporte().subscribe(
+          res => {
+            console.log(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
     if (conversion === 'encriptar') {
 
@@ -98,6 +112,17 @@ export class EncDesComponent implements OnInit {
   convertirTextoHASH1(conversion: string) {
     this.onSelect;
     this.hash='SHA1'
+        //operaciones para crear reporte de la accion ejecutada
+        this.reporteService.reporte.accion = conversion;
+        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+        this.reporteService.insertarReporte().subscribe(
+          res => {
+            console.log(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
     if (conversion === 'encriptar') {
 
@@ -114,6 +139,17 @@ export class EncDesComponent implements OnInit {
   convertirTextoSHA256(conversion: string) {
     this.onSelect;
     this.hash='SHA256'
+        //operaciones para crear reporte de la accion ejecutada
+        this.reporteService.reporte.accion = conversion;
+        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+        this.reporteService.insertarReporte().subscribe(
+          res => {
+            console.log(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
     if (conversion === 'encriptar') {
 
@@ -130,6 +166,17 @@ export class EncDesComponent implements OnInit {
   convertirTextoSHA512(conversion: string) {
     this.onSelect;
     this.hash='SHA512'
+        //operaciones para crear reporte de la accion ejecutada
+        this.reporteService.reporte.accion = conversion;
+        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+        this.reporteService.insertarReporte().subscribe(
+          res => {
+            console.log(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
     if (conversion === 'encriptar') {
 
@@ -146,6 +193,17 @@ export class EncDesComponent implements OnInit {
   convertirTextoMD5(conversion: string) {
     this.onSelect;
     this.hash='MD5'
+        //operaciones para crear reporte de la accion ejecutada
+        this.reporteService.reporte.accion = conversion;
+        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+        this.reporteService.insertarReporte().subscribe(
+          res => {
+            console.log(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
     if (conversion === 'encriptar') {
 
@@ -161,6 +219,17 @@ export class EncDesComponent implements OnInit {
 
   convertirTextoRSA(conversion: string) {
     this.onSelect;
+        //operaciones para crear reporte de la accion ejecutada
+        this.reporteService.reporte.accion = conversion;
+        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+        this.reporteService.insertarReporte().subscribe(
+          res => {
+            console.log(res)
+          },
+          err => {
+            console.log(err)
+          }
+        )
 
     this.encPass=0;
     if (conversion === 'encriptar') {

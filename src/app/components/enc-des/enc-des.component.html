@@ -49,19 +49,19 @@
 
         <!-- texto -->
         <h2>MENSAJE </h2>
-        <input type="text" class="form-control" placeholder="Ingresa texto a encriptar"  [(ngModel)]="enctexto" required>
+        <input type="text" class="form-control" placeholder="Ingresa texto a encriptar"  [(ngModel)]="enctexto" >
 
         <br>
         <!-- vector -->
         <div class="form-group">
           <h2 for="txtPassword">CLAVE</h2>
           <input type="password" class="form-control" placeholder="Ingresa llave de encripción" [(ngModel)]="encPass" 
-            required>
+            >
         </div>
 
 
         <h2>RESULTADO</h2>
-        <textarea class="form-control" readonly rows="2" >{{textoEncriptado}} {{textoDesencriptado}} {{tipodetexto}}</textarea>
+        <textarea class="form-control" readonly rows="2" > {{textoEncriptado}} {{textoDesencriptado}}  </textarea>
         <br>
         
         <br>
