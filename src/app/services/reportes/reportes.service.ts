@@ -8,8 +8,6 @@ import {Reporte} from '../../models/reporte'
 })
 export class ReportesService {
 
-  API_base = 'http://3.135.1.124:3000';
-
   reporte: Reporte = {
     id:0,
     fk_usuario:0,
@@ -17,6 +15,8 @@ export class ReportesService {
     herramienta:'',
     accion:''
   }
+
+  API_base = 'http://3.135.1.124:3000';
 
   constructor(private http : HttpClient) { }
 
