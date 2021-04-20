@@ -10,6 +10,9 @@ import { CifradoS, } from 'src/app/models/interfaces'
 import { DataService } from 'src/app/services/data/data.service';
 import { from } from 'rxjs';
 
+import {UsuariosService} from '../../services/usuarios/usuarios.service'
+import {ReportesService} from '../../services/reportes/reportes.service'
+
 
 
 @Component({
@@ -25,8 +28,9 @@ export class EncDesComponent implements OnInit {
   encPass: any;
   desPass: any;
   textoEncriptado: any;
-  textoDesencriptado: any;
-  hash: any;
+  textoDesencriptado: string;
+  tipodetexto:string;
+  hash: string;
   simetrico: any;
   asimetrico: any
   aes: any;
@@ -35,8 +39,9 @@ export class EncDesComponent implements OnInit {
   tip: any;
   bit: any;
   res: any;
+  algoritmo:string;
 
-  constructor(private dataSvc: DataService) { }
+  constructor(private dataSvc: DataService, private usuarioService:UsuariosService, private reporteService:ReportesService) { }
   //cosas para seleccionar cifrado
   public selectedcifrado: CifradoS = { id: 0, name: '' };
   public cifradoss: CifradoS[] = [];
@@ -45,8 +50,24 @@ export class EncDesComponent implements OnInit {
   //metodos para encriptar en AES
 
   convertirTexto(conversion: string) {
-    this.onSelect;
 
+    this.onSelect;
+    this.hash='AES'
+
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
+
+
+    this.onSelect;
     if (conversion === 'encriptar') {
 
       this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
@@ -60,6 +81,7 @@ export class EncDesComponent implements OnInit {
 
   convertirTextoDES(conversion: string) {
     this.onSelect;
+    this.hash='DES'
 
     if (conversion === 'encriptar') {
 
@@ -75,6 +97,7 @@ export class EncDesComponent implements OnInit {
 
   convertirTextoHASH1(conversion: string) {
     this.onSelect;
+    this.hash='SHA1'
 
     if (conversion === 'encriptar') {
 
@@ -90,6 +113,7 @@ export class EncDesComponent implements OnInit {
 
   convertirTextoSHA256(conversion: string) {
     this.onSelect;
+    this.hash='SHA256'
 
     if (conversion === 'encriptar') {
 
@@ -105,6 +129,7 @@ export class EncDesComponent implements OnInit {
 
   convertirTextoSHA512(conversion: string) {
     this.onSelect;
+    this.hash='SHA512'
 
     if (conversion === 'encriptar') {
 
@@ -120,6 +145,7 @@ export class EncDesComponent implements OnInit {
 
   convertirTextoMD5(conversion: string) {
     this.onSelect;
+    this.hash='MD5'
 
     if (conversion === 'encriptar') {
 
@@ -136,19 +162,27 @@ export class EncDesComponent implements OnInit {
   convertirTextoRSA(conversion: string) {
     this.onSelect;
 
+    this.encPass=0;
     if (conversion === 'encriptar') {
-      this.encPass=256
 
-      this.textoEncriptado = CryptoJS.SHA384(this.enctexto.trim(), this.encPass).toString();
+      this.textoEncriptado = CryptoJS.HmacSHA512(this.enctexto.trim(),this.enctexto).toString();
 
     }
     if (conversion === 'desencriptar') {
-      this.res='no compa este no se puede desir';
-      return this.res;
-
-      
+      this.textoDesencriptado = CryptoJS.HmacSHA512(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+}
+
+  //METODO PARA VERIFICAR**********************
+  verificarcifrado(conversion: string) {
+    
+    this.onSelect;
+
+    
+
   }
+
+
 
 
 
@@ -158,7 +192,7 @@ export class EncDesComponent implements OnInit {
 
     this.cifradoss = this.dataSvc.getCifrados();
 
-
+    this.reporteService.reporte.herramienta = 'ENCRIPTADOR';
   }
 
   onSelect(id: number): void {
@@ -170,12 +204,12 @@ export class EncDesComponent implements OnInit {
 
     //console.log('hola',this.dataSvc.getTipos().filter(item => item.tipoId == id));
     //cifrado son 3
-    this.cif = this.dataSvc.getCifrados().filter(item => item.id != 1);
-    console.log(this.dataSvc.getCifrados().filter(item => item.id != 1), 'este es un cifraado')
+    //this.cif = this.dataSvc.getCifrados().filter(item => item.id != 1);
+    console.log(this.dataSvc.getCifrados().filter(item => item.id != 0), 'este es un cifraado')
     //Tipos son 7 
     this.tip = this.dataSvc.getTipos().filter(item => item.id != 0);
 
-    console.log(this.dataSvc.getTipos().filter(item => item.id == 1), 'este es un tipo')
+    console.log(this.dataSvc.getTipos().filter(item => item.id != 0), 'este es un tipo')
 
 
     //---BUSCAMOS ID DE CIFRADO  E ID TIPO DE CIFRADO E EJECUTAMOS METODO
@@ -183,12 +217,14 @@ export class EncDesComponent implements OnInit {
       if (this.tip == 1) {
         //LLAMAR METODO
         this.convertirTexto;
+        this.verificarcifrado;
 
       }
     }
     if (id == 1) {
       if (this.tip == 2) {
         this.convertirTextoDES;
+        this.verificarcifrado;
 
       }
 
@@ -197,6 +233,7 @@ export class EncDesComponent implements OnInit {
     if (id == 2) {
       if (this.tip == 3) {
         this.convertirTextoHASH1;
+        this.verificarcifrado;
 
       }
 
@@ -205,6 +242,7 @@ export class EncDesComponent implements OnInit {
     if (id == 2) {
       if (this.tip == 4) {
         this.convertirTextoSHA256;
+        this.verificarcifrado;
 
       }
 
@@ -213,6 +251,7 @@ export class EncDesComponent implements OnInit {
     if (id == 2) {
       if (this.tip == 5) {
         this.convertirTextoSHA512;
+        this.verificarcifrado;
 
       }
 
@@ -221,11 +260,23 @@ export class EncDesComponent implements OnInit {
     if (id == 2) {
       if (this.tip == 6) {
         this.convertirTextoMD5;
+        this.verificarcifrado;
 
       }
+    
 
     }
+
+    if (id == 3) {
+      if (this.tip == 7) {
+        this.convertirTextoRSA;
+        this.verificarcifrado;
+
+      }
     
+
+    }
+
 
 
 

@@ -61,7 +61,9 @@
 
 
         <h2>RESULTADO</h2>
-        <textarea class="form-control" readonly rows="1" >{{textoEncriptado}} {{textoDesencriptado}}</textarea>
+        <textarea class="form-control" readonly rows="2" >{{textoEncriptado}} {{textoDesencriptado}} {{tipodetexto}}</textarea>
+        <br>
+        
         <br>
         <div class="container">
           <div class="row">
@@ -74,7 +76,7 @@
               <br>
               <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')">Calcular </button>
               &nbsp;
-              <button type="button" class="btn btn-dark "> Verficar</button>
+              <button type="button" class="btn btn-dark " (click)="convertirTexto('verificar')">  Verficar</button>
               <br>
               <br>
               <a href="http://localhost:4200/view/dashboard/view/encriptardesencriptar" style="color:white;">

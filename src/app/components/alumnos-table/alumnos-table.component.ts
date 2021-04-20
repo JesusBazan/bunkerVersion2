@@ -10,6 +10,7 @@ import {RolObj} from '../../models/rolObj'
 
 export interface UserInformation {
   posicion: number;
+  id_usuario: number;
   username: string;
   nombres: string;
   apellidos: string;

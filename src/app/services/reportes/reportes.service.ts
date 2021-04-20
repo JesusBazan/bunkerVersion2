@@ -25,7 +25,9 @@ export class ReportesService {
   }
 
   insertarReporte(){
-    this.reporte.id = 0;
+    console.log(this.reporte);
     return this.http.post('/insertarReporte', this.reporte);
   }
+
+
 }
