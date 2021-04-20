@@ -15,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
-import {MatSortModule} from '@angular/material/sort'
+import {MatSortModule} from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 
 
@@ -55,6 +56,13 @@ import { EncDesComponent } from './components/enc-des/enc-des.component';
 import { CommonModule } from '@angular/common';
 import { ReportesComponent } from './components/reportes/reportes.component';
 import { TableComponent } from './components/table/table.component';
+import { AlumnoComponent } from './components/alumno/alumno.component';
+import { SelectionTableComponent } from './components/selection-table/selection-table.component';
+import { AlumnosTableComponent } from './components/alumnos-table/alumnos-table.component';
+import { AlumnoFormComponent } from './components/alumno-form/alumno-form.component';
+import { ProfesorFormComponent } from './components/profesor-form/profesor-form.component';
+import { ProfesorTableComponent } from './components/profesor-table/profesor-table.component';
+import { ProfesorComponent } from './components/profesor/profesor.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +88,14 @@ import { TableComponent } from './components/table/table.component';
     CoorNavBarComponent,
     EncDesComponent,
     ReportesComponent,
-    TableComponent
+    TableComponent,
+    AlumnoComponent,
+    SelectionTableComponent,
+    AlumnosTableComponent,
+    AlumnoFormComponent,
+    ProfesorFormComponent,
+    ProfesorTableComponent,
+    ProfesorComponent
 
   ],
   imports: [
@@ -102,6 +117,7 @@ import { TableComponent } from './components/table/table.component';
     MatFormFieldModule,
     MatTableModule,
     MatSortModule,
+    MatCheckboxModule,
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,

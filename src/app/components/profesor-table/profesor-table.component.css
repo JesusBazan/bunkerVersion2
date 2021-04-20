@@ -1,0 +1,9 @@
+table {
+    width: 1000px;
+    margin: 30px;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  

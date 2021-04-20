@@ -5,10 +5,10 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Home</a>
-      <a mat-list-item href="#">Reportes</a>
-      <a mat-list-item href="#">Alumnos</a>
-      <a mat-list-item href="#">Profesores</a>
+      <a mat-list-item [routerLink]="['view/inicio/Coor']">Home</a>
+      <a mat-list-item [routerLink]="['view/reportes/Coor']">Reportes</a>
+      <a mat-list-item [routerLink]="['view/alumnos/Coor']">Alumnos</a>
+      <a mat-list-item [routerLink]="['view/profesores/Coor']">Profesores</a>
       <a mat-list-item href="#">Cerrar Sesion</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -24,6 +24,7 @@
       </button>
       <span>BUNKER (Coordinadores)</span>
     </mat-toolbar>
+    <ng-content name='navigationOut'></ng-content>
     <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

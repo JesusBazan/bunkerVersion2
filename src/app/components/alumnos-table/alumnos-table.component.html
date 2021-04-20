@@ -24,25 +24,20 @@
       <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
     </ng-container>
 
+    <!-- correo Column -->
+    <ng-container matColumnDef="correo">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Correo </th>
+        <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
+      </ng-container>
+
     <!-- Rol Column -->
     <ng-container matColumnDef="rol">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Rol </th>
       <td mat-cell *matCellDef="let element"> {{element.rol}} </td>
     </ng-container>
-
-    <!-- Herramienta Column -->
-    <ng-container matColumnDef="herramienta">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Herramienta </th>
-      <td mat-cell *matCellDef="let element"> {{element.herramienta}} </td>
-    </ng-container>
-
-    <!-- Accion Column -->
-    <ng-container matColumnDef="accion">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Accion </th>
-      <td mat-cell *matCellDef="let element"> {{element.accion}} </td>
-    </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="onRowClicked(row)"></tr>
   </table>
   
