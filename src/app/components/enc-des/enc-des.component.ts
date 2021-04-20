@@ -10,6 +10,9 @@ import { CifradoS, } from 'src/app/models/interfaces'
 import { DataService } from 'src/app/services/data/data.service';
 import { from } from 'rxjs';
 
+import {UsuariosService} from '../../services/usuarios/usuarios.service'
+import {ReportesService} from '../../services/reportes/reportes.service'
+
 
 
 @Component({
@@ -36,7 +39,7 @@ export class EncDesComponent implements OnInit {
   bit: any;
   res: any;
 
-  constructor(private dataSvc: DataService) { }
+  constructor(private dataSvc: DataService, private usuarioService:UsuariosService, private reporteService:ReportesService) { }
   //cosas para seleccionar cifrado
   public selectedcifrado: CifradoS = { id: 0, name: '' };
   public cifradoss: CifradoS[] = [];
@@ -45,8 +48,19 @@ export class EncDesComponent implements OnInit {
   //metodos para encriptar en AES
 
   convertirTexto(conversion: string) {
-    this.onSelect;
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
+    this.onSelect;
     if (conversion === 'encriptar') {
 
       this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
@@ -158,7 +172,7 @@ export class EncDesComponent implements OnInit {
 
     this.cifradoss = this.dataSvc.getCifrados();
 
-
+    this.reporteService.reporte.herramienta = 'ENCRIPTADOR';
   }
 
   onSelect(id: number): void {

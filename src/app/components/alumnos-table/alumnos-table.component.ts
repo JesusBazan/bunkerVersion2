@@ -47,9 +47,6 @@ export class AlumnosTableComponent implements OnInit {
     .subscribe(res => this.dataSource.data = res as UserInformation[]);
   }
 
-<<<<<<< HEAD
-  onRowClcked(row:any){
-=======
   onRowClicked(row:any){
     this.usuariosService.usuario.id = row.id;
     this.usuariosService.usuario.username = row.username;
@@ -57,7 +54,6 @@ export class AlumnosTableComponent implements OnInit {
     this.usuariosService.usuario.apellidos = row.apellidos;
     this.usuariosService.usuario.correo = row.correo;
     this.usuariosService.usuario.contrasenia = row.contrasenia;
->>>>>>> 2d19e60c0e64cdaf8103bdd964773c8c7a7563df
     console.log(row)
   }
 

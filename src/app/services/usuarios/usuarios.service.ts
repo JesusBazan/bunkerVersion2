@@ -22,6 +22,17 @@ export class UsuariosService {
     foto: 'https://stest.billbyte.co/v3.0/dist/img/avatar/default.png'
   }
 
+  usuarioActual: Usuario = {
+    id: 0,
+    username: '',
+    nombres: '',
+    apellidos: '',
+    correo: '',
+    rol: '',
+    contrasenia: '',
+    foto: ''
+  }
+
   rolUser: number = 0;
 
   constructor(private http : HttpClient) { }
@@ -38,11 +49,14 @@ export class UsuariosService {
     this.usuario.id = 0;
     console.log(this.http.post('/insertarUsuario', this.usuario))
     return this.http.post('/insertarUsuario', this.usuario);
-  
   }
 
   iniciarSesion( usuarioLog:any ){
     return this.http.post('/iniciarSesion',usuarioLog)
+  }
+
+  getUsuarioActual( usuarioLog:any ){
+    return this.http.post('/usuarioActual',usuarioLog)
   }
 
   tablaUsuarios( rolObj:any ){
