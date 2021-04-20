@@ -19,7 +19,9 @@
 
         <h2>Mensaje Firmado</h2>
 
-        <textarea class="form-control" readonly rows="2">{{textoEncriptado}} {{textoDesencriptado}}</textarea>
+        <textarea class="form-control" readonly rows="2">{{textoEncriptado}} {{textoDesencriptado}} </textarea>
+        <br>
+        <h2 style="color: red; text-align: center;">{{ver}}</h2>
         <br>
 
         <div class="container">
@@ -29,7 +31,7 @@
               <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')">Firmar </button>
               &nbsp;
               &nbsp;
-              <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')"> Verficar</button>
+              <button type="button" class="btn btn-dark " (click)="verificar('encriptar')"> Verficar</button>
               <br>
               <br>
               <a href="http://localhost:4200/view/dashboard/view/firmar" style="color:white;">

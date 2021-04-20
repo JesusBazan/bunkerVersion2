@@ -246,6 +246,7 @@ export class EncDesComponent implements OnInit {
   verificarcifrado(conversion: string) {
     
     this.onSelect;
+    
 
     
 
