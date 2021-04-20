@@ -1,25 +1,41 @@
-<html>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 align="center">Firmar un mensaje </h1>
-    <br>
-    <br>    
-    <form>
-        <div class="mb-3">
-          <label for="Mensaje" class="form-label">Mensaje</label>
-          <input type="text" class="form-control" id="Mensaje" >
-        </div>
-        <div class="mb-3">
-          <label for="Firma" class="form-label">Firma</label>
-          <input type="text" class="form-control" id="Firma">
-        </div>
-        <button type="submit" class="btn btn-primary">Firmar</button>
-        
-        <button type="submit" class="btn btn-primary">verificacion</button>
-        <button type="text" class="btn btn-primary">Reiniciar</button>
-      </form>
+<br>
+<div class="container justify-content-center">
+  <div class="container justify-content-center">
+    <div class="container justify-content-center lg-col-4">
 
 
-</html>
+        <h1 style="text-align: center;">
+          Encriptar
+        </h1>
+        <br>
+        <div class="form-group">
+          <h2>Mensaje </h2>
+          <input type="text" class="form-control" placeholder="Ingresa texto a encriptar" [(ngModel)]="enctexto">
+        </div>
+
+        <h2>Mensaje Firmado</h2>
+
+        <textarea class="form-control" readonly rows="2">{{textoEncriptado}} {{textoDesencriptado}}</textarea>
+        <br>
+
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              
+              <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')">Firmar </button>
+              &nbsp;
+              &nbsp;
+              <button type="button" class="btn btn-dark " (click)="convertirTexto('encriptar')"> Verficar</button>
+              <br>
+              <br>
+              <a href="http://localhost:4200/view/dashboard/view/firmar" style="color:white;">
+                <button type="button" class="btn btn-dark" style="color:white;" >Reiniciar</button>
+              </a>
+              <br>
+
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
