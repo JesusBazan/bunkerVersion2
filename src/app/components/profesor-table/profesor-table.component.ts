@@ -10,7 +10,6 @@ import {RolObj} from '../../models/rolObj'
 
 export interface UserInformation {
   posicion: number;
-  id_usuario: number;
   username: string;
   nombres: string;
   apellidos: string;
@@ -19,14 +18,14 @@ export interface UserInformation {
 }
 
 @Component({
-  selector: 'app-alumnos-table',
-  templateUrl: './alumnos-table.component.html',
-  styleUrls: ['./alumnos-table.component.css']
+  selector: 'app-profesor-table',
+  templateUrl: './profesor-table.component.html',
+  styleUrls: ['./profesor-table.component.css']
 })
-export class AlumnosTableComponent implements OnInit {
+export class ProfesorTableComponent implements OnInit {
 
   rolObj: RolObj = {
-    rol: 2
+    rol: 3
   }
 
   ELEMENT_DATA: UserInformation[] = [];
@@ -47,9 +46,6 @@ export class AlumnosTableComponent implements OnInit {
     .subscribe(res => this.dataSource.data = res as UserInformation[]);
   }
 
-<<<<<<< HEAD
-  onRowClcked(row:any){
-=======
   onRowClicked(row:any){
     this.usuariosService.usuario.id = row.id;
     this.usuariosService.usuario.username = row.username;
@@ -57,7 +53,6 @@ export class AlumnosTableComponent implements OnInit {
     this.usuariosService.usuario.apellidos = row.apellidos;
     this.usuariosService.usuario.correo = row.correo;
     this.usuariosService.usuario.contrasenia = row.contrasenia;
->>>>>>> 2d19e60c0e64cdaf8103bdd964773c8c7a7563df
     console.log(row)
   }
 

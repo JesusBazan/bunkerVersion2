@@ -1,6 +1,8 @@
 import {AfterViewInit, Component, ViewChild, OnInit} from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
+
 
 //SERVICES
 import {ReportesService} from '../../services/reportes/reportes.service'
@@ -27,7 +29,7 @@ export interface PeriodicElement {
 export class TableComponent implements OnInit {
 
   rolObj: RolObj = {
-    rol: 0
+    rol: this.usuariosService.rolUser
   }
 
   reponse: any = [];
@@ -38,7 +40,7 @@ export class TableComponent implements OnInit {
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private reporteService: ReportesService) {}
+  constructor(private reporteService: ReportesService, private usuariosService: UsuariosService) {}
 
   ngOnInit(): void {
     this.dataSource.sort = this.sort;

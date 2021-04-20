@@ -1,6 +1,6 @@
 <div class="form">
 
-    <p class="tagRegister">Crea tu cuenta!!</p>
+    <p class="tagRegister">Profesor</p>
 
     <form class="example-form">
       <mat-form-field class="inputReg">
@@ -37,8 +37,11 @@
         </button>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="btnRegister" (click)="saveNewUser()">registrarse</button>
+      <button mat-raised-button color="primary" class="btnRegister" (click)="saveNewUser()">Crear</button>
+      <button mat-raised-button color="primary" class="btnRegister" (click)="updateUser()">Actualizar</button>
+      <button mat-raised-button color="primary" class="btnRegister" (click)="deleteUser()">Eliminar</button>
       
 
     </form>
-</div>
+  </div>
+  <simple-notifications ></simple-notifications>

@@ -5,11 +5,11 @@ import { NotificationsService} from 'angular2-notifications'
 
 
 @Component({
-  selector: 'app-alumno-form',
-  templateUrl: './alumno-form.component.html',
-  styleUrls: ['./alumno-form.component.css']
+  selector: 'app-profesor-form',
+  templateUrl: './profesor-form.component.html',
+  styleUrls: ['./profesor-form.component.css']
 })
-export class AlumnoFormComponent implements OnInit {
+export class ProfesorFormComponent implements OnInit {
 
   usuario: Usuario = {
     id: 0,
@@ -48,7 +48,7 @@ export class AlumnoFormComponent implements OnInit {
   }
 
   saveNewUser(){
-    this.usuariosService.usuario.rol = 'alumno';
+    this.usuariosService.usuario.rol = 'profesor';
     this.usuariosService.insertarUsuario().subscribe(
       res => {
         console.log(res);
@@ -62,7 +62,7 @@ export class AlumnoFormComponent implements OnInit {
   }
 
   updateUser(){
-    this.usuariosService.usuario.rol = 'alumno';
+    this.usuariosService.usuario.rol = 'profesor';
     this.usuariosService.actualizarUsuario().subscribe(
       res => {
         console.log(res);
