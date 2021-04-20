@@ -10,6 +10,7 @@ import {RolObj} from '../../models/rolObj'
 
 export interface UserInformation {
   posicion: number;
+  id_usuario: number;
   username: string;
   nombres: string;
   apellidos: string;
@@ -44,6 +45,10 @@ export class AlumnosTableComponent implements OnInit {
   getTableUsuarios(){
     this.usuariosService.tablaUsuarios(this.rolObj)
     .subscribe(res => this.dataSource.data = res as UserInformation[]);
+  }
+
+  onRowClcked(row:any){
+    console.log(row)
   }
 
 }
