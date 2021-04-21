@@ -10,8 +10,8 @@ import { CifradoS, } from 'src/app/models/interfaces'
 import { DataService } from 'src/app/services/data/data.service';
 import { from } from 'rxjs';
 
-import {UsuariosService} from '../../services/usuarios/usuarios.service'
-import {ReportesService} from '../../services/reportes/reportes.service'
+import { UsuariosService } from '../../services/usuarios/usuarios.service'
+import { ReportesService } from '../../services/reportes/reportes.service'
 
 
 
@@ -29,7 +29,7 @@ export class EncDesComponent implements OnInit {
   desPass: any;
   textoEncriptado: any;
   textoDesencriptado: string;
-  tipodetexto:string;
+  tipodetexto: string;
   hash: string;
   simetrico: any;
   asimetrico: any
@@ -39,21 +39,23 @@ export class EncDesComponent implements OnInit {
   tip: any;
   bit: any;
   res: any;
-  algoritmo:string;
+  verifica: string;
+  ver: string;
 
-  constructor(private dataSvc: DataService, private usuarioService:UsuariosService, private reporteService:ReportesService) { }
+
+  constructor(private dataSvc: DataService, private usuarioService: UsuariosService, private reporteService: ReportesService) { }
   //cosas para seleccionar cifrado
   public selectedcifrado: CifradoS = { id: 0, name: '' };
   public cifradoss: CifradoS[] = [];
   public tiposs: TipoS[] = [];
-  
 
-  //metodos para encriptar en AES
+
+  ////////////////////////////////////    metodos para encriptar en AES     /////////////////////////////////////////
 
   convertirTexto(conversion: string) {
 
     this.onSelect;
-    this.hash='AES'
+    this.hash = 'AES'
 
     //operaciones para crear reporte de la accion ejecutada
     this.reporteService.reporte.accion = conversion;
@@ -73,29 +75,31 @@ export class EncDesComponent implements OnInit {
 
 
       this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+      
 
     }
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.AES.decrypt(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+    this.verificarcifrado;
   }
-  // METODO PARA DES
+  ////////////////////////////////////////   METODO PARA DES     //////////////////////////////////////////////////////
 
   convertirTextoDES(conversion: string) {
     this.onSelect;
-    this.hash='DES'
+    this.hash = 'DES'
 
-        //operaciones para crear reporte de la accion ejecutada
-        this.reporteService.reporte.accion = conversion;
-        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
-        this.reporteService.insertarReporte().subscribe(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          }
-        )
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
     if (conversion === 'encriptar') {
 
@@ -105,24 +109,25 @@ export class EncDesComponent implements OnInit {
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.DES.decrypt(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+    this.verificarcifradoDES;
   }
 
-  //  METODO PARA HASH1
+  /////////////////////////////////////////////  METODO PARA HASH1//////////////////////////////////////
 
   convertirTextoHASH1(conversion: string) {
     this.onSelect;
-    this.hash='SHA1'
-        //operaciones para crear reporte de la accion ejecutada
-        this.reporteService.reporte.accion = conversion;
-        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
-        this.reporteService.insertarReporte().subscribe(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          }
-        )
+    this.hash = 'SHA1'
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
     if (conversion === 'encriptar') {
 
@@ -132,24 +137,25 @@ export class EncDesComponent implements OnInit {
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.SHA1(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+    this.verificarcifradoSHA1;
   }
 
-  // METODO PARA SHA 256
+  /////////////////////////////////////   METODO PARA SHA 256    ///////////////////////////////////////////////
 
   convertirTextoSHA256(conversion: string) {
     this.onSelect;
-    this.hash='SHA256'
-        //operaciones para crear reporte de la accion ejecutada
-        this.reporteService.reporte.accion = conversion;
-        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
-        this.reporteService.insertarReporte().subscribe(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          }
-        )
+    this.hash = 'SHA256'
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
     if (conversion === 'encriptar') {
 
@@ -159,24 +165,25 @@ export class EncDesComponent implements OnInit {
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.SHA256(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+    this.verificarcifradoSHA256;
   }
 
-  //METODO PARA SHA 512
+  //////////////////////////////     METODO PARA SHA 512 ////////////////////////////////////
 
   convertirTextoSHA512(conversion: string) {
     this.onSelect;
-    this.hash='SHA512'
-        //operaciones para crear reporte de la accion ejecutada
-        this.reporteService.reporte.accion = conversion;
-        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
-        this.reporteService.insertarReporte().subscribe(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          }
-        )
+    this.hash = 'SHA512'
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
     if (conversion === 'encriptar') {
 
@@ -186,24 +193,25 @@ export class EncDesComponent implements OnInit {
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.SHA512(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+    this.verificarcifradoSHA512;
   }
 
-  //METODO PARA MD5
+  ////////////////////////////////////////  METODO PARA MD5 ///////////////////////////////////////////////////
 
   convertirTextoMD5(conversion: string) {
     this.onSelect;
-    this.hash='MD5'
-        //operaciones para crear reporte de la accion ejecutada
-        this.reporteService.reporte.accion = conversion;
-        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
-        this.reporteService.insertarReporte().subscribe(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          }
-        )
+    this.hash = 'MD5'
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
     if (conversion === 'encriptar') {
 
@@ -213,45 +221,171 @@ export class EncDesComponent implements OnInit {
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.SHA512(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
+    this.verificarcifradoMD5;
   }
 
-  //METODO PARA DSA ******************************** 
+  //////////////////////////////////////   METODO PARA RSA   ///////////////////////////////////////////////
 
   convertirTextoRSA(conversion: string) {
     this.onSelect;
-        //operaciones para crear reporte de la accion ejecutada
-        this.reporteService.reporte.accion = conversion;
-        this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
-        this.reporteService.insertarReporte().subscribe(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          }
-        )
+    //operaciones para crear reporte de la accion ejecutada
+    this.reporteService.reporte.accion = conversion;
+    this.reporteService.reporte.fk_usuario = this.usuarioService.usuarioActual.id;
+    this.reporteService.insertarReporte().subscribe(
+      res => {
+        console.log(res)
+      },
+      err => {
+        console.log(err)
+      }
+    )
 
-    this.encPass=0;
+    this.encPass = 0;
     if (conversion === 'encriptar') {
 
-      this.textoEncriptado = CryptoJS.HmacSHA512(this.enctexto.trim(),this.enctexto).toString();
+      this.textoEncriptado = CryptoJS.HmacSHA512(this.enctexto.trim(), this.enctexto).toString();
 
     }
     if (conversion === 'desencriptar') {
       this.textoDesencriptado = CryptoJS.HmacSHA512(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
     }
-}
-
-  //METODO PARA VERIFICAR**********************
-  verificarcifrado(conversion: string) {
-    
-    this.onSelect;
-    
-
-    
-
+    this.verificarcifradoRSA;
   }
 
+  //**********************METODOs PARA VERIFICAR cifrados***************************
+  //*********************                                ***************************
+  verificarcifrado(conversion: string) {
+    
+    this.convertirTexto;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica = CryptoJS.AES.decrypt(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='CONFIRMACION CORRECTA';
+      }
+
+    }  
+ 
+  }
+
+  verificarcifradoDES(conversion: string) {
+    
+    this.convertirTextoDES;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica = CryptoJS.DES.decrypt(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='VERIFICACIÓN CORRECTA';
+      }
+
+    }  
+ 
+  }
+
+  verificarcifradoSHA1(conversion: string) {
+    
+    this.convertirTextoHASH1;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica =CryptoJS.SHA1(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='CONFIRMACION CORRECTA';
+      }
+
+    }
+
+ 
+  }
+
+  verificarcifradoSHA256(conversion: string) {
+    
+    this.convertirTextoSHA256;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica =CryptoJS.SHA1(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='CONFIRMACION CORRECTA';
+      }
+
+    }
+  }
+
+  verificarcifradoSHA512(conversion: string) {
+    
+    this.convertirTextoSHA512;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica =CryptoJS.SHA512(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='CONFIRMACION CORRECTA';
+      }
+
+    }
+  }
+
+  verificarcifradoMD5(conversion: string) {
+    
+    this.convertirTextoSHA512;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica =CryptoJS.MD5(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='CONFIRMACION CORRECTA';
+      }
+
+    }
+  }
+
+  verificarcifradoRSA(conversion: string) {
+    
+    this.convertirTextoSHA512;
+    if (conversion === 'encriptar') {
+      console.log('ALGO')
+
+     // this.textoEncriptado = CryptoJS.AES.encrypt(this.enctexto.trim(), this.encPass.trim()).toString();
+     this.verifica =CryptoJS.HmacSHA512(this.enctexto.trim(), this.encPass.trim()).toString(CryptoJS.enc.Utf8);
+     console.log(this.verifica);
+      
+      if(this.textoDesencriptado = this.verifica ){
+        console.log('entre');
+        this.ver='CONFIRMACION CORRECTA';
+      }
+
+    }
+  }
+
+
+  
 
 
 
@@ -286,64 +420,52 @@ export class EncDesComponent implements OnInit {
     if (id == 1) {
       if (this.tip == 1) {
         //LLAMAR METODO
-        this.convertirTexto;
-        this.verificarcifrado;
+        this.convertirTexto;    
 
       }
     }
     if (id == 1) {
       if (this.tip == 2) {
         this.convertirTextoDES;
-        this.verificarcifrado;
-
+        
       }
-
     }
 
     if (id == 2) {
       if (this.tip == 3) {
-        this.convertirTextoHASH1;
-        this.verificarcifrado;
-
+        this.convertirTextoHASH1;    
       }
-
     }
 
     if (id == 2) {
       if (this.tip == 4) {
-        this.convertirTextoSHA256;
-        this.verificarcifrado;
-
+        this.convertirTextoSHA256;  
       }
-
     }
 
     if (id == 2) {
       if (this.tip == 5) {
-        this.convertirTextoSHA512;
-        this.verificarcifrado;
-
-      }
-
+        this.convertirTextoSHA512;  
+      } 
     }
 
     if (id == 2) {
       if (this.tip == 6) {
         this.convertirTextoMD5;
-        this.verificarcifrado;
+        
 
       }
-    
+
 
     }
 
     if (id == 3) {
       if (this.tip == 7) {
         this.convertirTextoRSA;
-        this.verificarcifrado;
+        
 
       }
-    
+
 
     }
 
